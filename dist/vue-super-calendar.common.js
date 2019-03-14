@@ -1,3 +1,4 @@
+module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -81,7 +82,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "6a75");
+/******/ 	return __webpack_require__(__webpack_require__.s = "b874");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -262,6 +263,16 @@ module.exports = function (exec) {
     return true;
   }
 };
+
+
+/***/ }),
+
+/***/ "2675":
+/***/ (function(module, exports, __webpack_require__) {
+
+var $export = __webpack_require__("471d");
+// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+$export($export.S + $export.F * !__webpack_require__("690a"), 'Object', { defineProperty: __webpack_require__("4cf4").f });
 
 
 /***/ }),
@@ -465,15 +476,44 @@ module.exports = __webpack_require__("690a") ? function (object, key, value) {
 
 /***/ }),
 
+/***/ "3a23":
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__("694f").f;
+var FProto = Function.prototype;
+var nameRE = /^\s*function ([^ (]*)/;
+var NAME = 'name';
+
+// 19.2.4.2 name
+NAME in FProto || __webpack_require__("3a0f") && dP(FProto, NAME, {
+  configurable: true,
+  get: function () {
+    try {
+      return ('' + this).match(nameRE)[1];
+    } catch (e) {
+      return '';
+    }
+  }
+});
+
+
+/***/ }),
+
 /***/ "3fbb":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_0_id_c96645ca_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("bf5a");
-/* harmony import */ var _node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_0_id_c96645ca_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_0_id_c96645ca_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_0_id_c96645ca_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_0_id_c96645ca_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_0_id_c96645ca_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_0_id_c96645ca_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("ab34");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_0_id_c96645ca_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_0_id_c96645ca_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_0_id_c96645ca_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "431d":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("e432");
 
 /***/ }),
 
@@ -654,117 +694,6 @@ module.exports = !__webpack_require__("690a") && !__webpack_require__("7f67")(fu
 
 /***/ }),
 
-/***/ "565c":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/_vue-style-loader@4.1.2@vue-style-loader/lib/listToStyles.js
-/**
- * Translates the list format produced by css-loader into something
- * easier to manipulate.
- */
-function listToStyles (parentId, list) {
-  var styles = []
-  var newStyles = {}
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i]
-    var id = item[0]
-    var css = item[1]
-    var media = item[2]
-    var sourceMap = item[3]
-    var part = {
-      id: parentId + ':' + i,
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    }
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = { id: id, parts: [part] })
-    } else {
-      newStyles[id].parts.push(part)
-    }
-  }
-  return styles
-}
-
-// CONCATENATED MODULE: ./node_modules/_vue-style-loader@4.1.2@vue-style-loader/lib/addStylesShadow.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return addStylesToShadowDOM; });
-
-
-function addStylesToShadowDOM (parentId, list, shadowRoot) {
-  var styles = listToStyles(parentId, list)
-  addStyles(styles, shadowRoot)
-}
-
-/*
-type StyleObject = {
-  id: number;
-  parts: Array<StyleObjectPart>
-}
-
-type StyleObjectPart = {
-  css: string;
-  media: string;
-  sourceMap: ?string
-}
-*/
-
-function addStyles (styles /* Array<StyleObject> */, shadowRoot) {
-  const injectedStyles =
-    shadowRoot._injectedStyles ||
-    (shadowRoot._injectedStyles = {})
-  for (var i = 0; i < styles.length; i++) {
-    var item = styles[i]
-    var style = injectedStyles[item.id]
-    if (!style) {
-      for (var j = 0; j < item.parts.length; j++) {
-        addStyle(item.parts[j], shadowRoot)
-      }
-      injectedStyles[item.id] = true
-    }
-  }
-}
-
-function createStyleElement (shadowRoot) {
-  var styleElement = document.createElement('style')
-  styleElement.type = 'text/css'
-  shadowRoot.appendChild(styleElement)
-  return styleElement
-}
-
-function addStyle (obj /* StyleObjectPart */, shadowRoot) {
-  var styleElement = createStyleElement(shadowRoot)
-  var css = obj.css
-  var media = obj.media
-  var sourceMap = obj.sourceMap
-
-  if (media) {
-    styleElement.setAttribute('media', media)
-  }
-
-  if (sourceMap) {
-    // https://developer.chrome.com/devtools/docs/javascript-debugging
-    // this makes source maps inside style tags work properly in Chrome
-    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
-    // http://stackoverflow.com/a/26603875
-    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
-  }
-
-  if (styleElement.styleSheet) {
-    styleElement.styleSheet.cssText = css
-  } else {
-    while (styleElement.firstChild) {
-      styleElement.removeChild(styleElement.firstChild)
-    }
-    styleElement.appendChild(document.createTextNode(css))
-  }
-}
-
-
-/***/ }),
-
 /***/ "56f8":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -837,89 +766,6 @@ module.exports = !__webpack_require__("7f67")(function () {
 
 /***/ }),
 
-/***/ "690e":
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
-
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
-
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
-
-	return [content].join('\n');
-}
-
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-
 /***/ "694f":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -940,1032 +786,6 @@ exports.f = __webpack_require__("3a0f") ? Object.defineProperty : function defin
   return O;
 };
 
-
-/***/ }),
-
-/***/ "6a75":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/_@vue_cli-service@3.5.1@@vue/cli-service/lib/commands/build/setPublicPath.js
-// This file is imported into lib/wc client bundles.
-
-if (typeof window !== 'undefined') {
-  var setPublicPath_i
-  if ((setPublicPath_i = window.document.currentScript) && (setPublicPath_i = setPublicPath_i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
-    __webpack_require__.p = setPublicPath_i[1] // eslint-disable-line
-  }
-}
-
-// Indicate to webpack that this file can be concatenated
-/* harmony default export */ var setPublicPath = (null);
-
-// EXTERNAL MODULE: external "Vue"
-var external_Vue_ = __webpack_require__("8bbf");
-var external_Vue_default = /*#__PURE__*/__webpack_require__.n(external_Vue_);
-
-// CONCATENATED MODULE: ./node_modules/_@vue_web-component-wrapper@1.2.0@@vue/web-component-wrapper/dist/vue-wc-wrapper.js
-const camelizeRE = /-(\w)/g;
-const camelize = str => {
-  return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : '')
-};
-
-const hyphenateRE = /\B([A-Z])/g;
-const hyphenate = str => {
-  return str.replace(hyphenateRE, '-$1').toLowerCase()
-};
-
-function getInitialProps (propsList) {
-  const res = {};
-  propsList.forEach(key => {
-    res[key] = undefined;
-  });
-  return res
-}
-
-function injectHook (options, key, hook) {
-  options[key] = [].concat(options[key] || []);
-  options[key].unshift(hook);
-}
-
-function callHooks (vm, hook) {
-  if (vm) {
-    const hooks = vm.$options[hook] || [];
-    hooks.forEach(hook => {
-      hook.call(vm);
-    });
-  }
-}
-
-function createCustomEvent (name, args) {
-  return new CustomEvent(name, {
-    bubbles: false,
-    cancelable: false,
-    detail: args
-  })
-}
-
-const isBoolean = val => /function Boolean/.test(String(val));
-const isNumber = val => /function Number/.test(String(val));
-
-function convertAttributeValue (value, name, { type } = {}) {
-  if (isBoolean(type)) {
-    if (value === 'true' || value === 'false') {
-      return value === 'true'
-    }
-    if (value === '' || value === name) {
-      return true
-    }
-    return value != null
-  } else if (isNumber(type)) {
-    const parsed = parseFloat(value, 10);
-    return isNaN(parsed) ? value : parsed
-  } else {
-    return value
-  }
-}
-
-function toVNodes (h, children) {
-  const res = [];
-  for (let i = 0, l = children.length; i < l; i++) {
-    res.push(toVNode(h, children[i]));
-  }
-  return res
-}
-
-function toVNode (h, node) {
-  if (node.nodeType === 3) {
-    return node.data.trim() ? node.data : null
-  } else if (node.nodeType === 1) {
-    const data = {
-      attrs: getAttributes(node),
-      domProps: {
-        innerHTML: node.innerHTML
-      }
-    };
-    if (data.attrs.slot) {
-      data.slot = data.attrs.slot;
-      delete data.attrs.slot;
-    }
-    return h(node.tagName, data)
-  } else {
-    return null
-  }
-}
-
-function getAttributes (node) {
-  const res = {};
-  for (let i = 0, l = node.attributes.length; i < l; i++) {
-    const attr = node.attributes[i];
-    res[attr.nodeName] = attr.nodeValue;
-  }
-  return res
-}
-
-function wrap (Vue, Component) {
-  const isAsync = typeof Component === 'function' && !Component.cid;
-  let isInitialized = false;
-  let hyphenatedPropsList;
-  let camelizedPropsList;
-  let camelizedPropsMap;
-
-  function initialize (Component) {
-    if (isInitialized) return
-
-    const options = typeof Component === 'function'
-      ? Component.options
-      : Component;
-
-    // extract props info
-    const propsList = Array.isArray(options.props)
-      ? options.props
-      : Object.keys(options.props || {});
-    hyphenatedPropsList = propsList.map(hyphenate);
-    camelizedPropsList = propsList.map(camelize);
-    const originalPropsAsObject = Array.isArray(options.props) ? {} : options.props || {};
-    camelizedPropsMap = camelizedPropsList.reduce((map, key, i) => {
-      map[key] = originalPropsAsObject[propsList[i]];
-      return map
-    }, {});
-
-    // proxy $emit to native DOM events
-    injectHook(options, 'beforeCreate', function () {
-      const emit = this.$emit;
-      this.$emit = (name, ...args) => {
-        this.$root.$options.customElement.dispatchEvent(createCustomEvent(name, args));
-        return emit.call(this, name, ...args)
-      };
-    });
-
-    injectHook(options, 'created', function () {
-      // sync default props values to wrapper on created
-      camelizedPropsList.forEach(key => {
-        this.$root.props[key] = this[key];
-      });
-    });
-
-    // proxy props as Element properties
-    camelizedPropsList.forEach(key => {
-      Object.defineProperty(CustomElement.prototype, key, {
-        get () {
-          return this._wrapper.props[key]
-        },
-        set (newVal) {
-          this._wrapper.props[key] = newVal;
-        },
-        enumerable: false,
-        configurable: true
-      });
-    });
-
-    isInitialized = true;
-  }
-
-  function syncAttribute (el, key) {
-    const camelized = camelize(key);
-    const value = el.hasAttribute(key) ? el.getAttribute(key) : undefined;
-    el._wrapper.props[camelized] = convertAttributeValue(
-      value,
-      key,
-      camelizedPropsMap[camelized]
-    );
-  }
-
-  class CustomElement extends HTMLElement {
-    constructor () {
-      super();
-      this.attachShadow({ mode: 'open' });
-
-      const wrapper = this._wrapper = new Vue({
-        name: 'shadow-root',
-        customElement: this,
-        shadowRoot: this.shadowRoot,
-        data () {
-          return {
-            props: {},
-            slotChildren: []
-          }
-        },
-        render (h) {
-          return h(Component, {
-            ref: 'inner',
-            props: this.props
-          }, this.slotChildren)
-        }
-      });
-
-      // Use MutationObserver to react to future attribute & slot content change
-      const observer = new MutationObserver(mutations => {
-        let hasChildrenChange = false;
-        for (let i = 0; i < mutations.length; i++) {
-          const m = mutations[i];
-          if (isInitialized && m.type === 'attributes' && m.target === this) {
-            syncAttribute(this, m.attributeName);
-          } else {
-            hasChildrenChange = true;
-          }
-        }
-        if (hasChildrenChange) {
-          wrapper.slotChildren = Object.freeze(toVNodes(
-            wrapper.$createElement,
-            this.childNodes
-          ));
-        }
-      });
-      observer.observe(this, {
-        childList: true,
-        subtree: true,
-        characterData: true,
-        attributes: true
-      });
-    }
-
-    get vueComponent () {
-      return this._wrapper.$refs.inner
-    }
-
-    connectedCallback () {
-      const wrapper = this._wrapper;
-      if (!wrapper._isMounted) {
-        // initialize attributes
-        const syncInitialAttributes = () => {
-          wrapper.props = getInitialProps(camelizedPropsList);
-          hyphenatedPropsList.forEach(key => {
-            syncAttribute(this, key);
-          });
-        };
-
-        if (isInitialized) {
-          syncInitialAttributes();
-        } else {
-          // async & unresolved
-          Component().then(resolved => {
-            if (resolved.__esModule || resolved[Symbol.toStringTag] === 'Module') {
-              resolved = resolved.default;
-            }
-            initialize(resolved);
-            syncInitialAttributes();
-          });
-        }
-        // initialize children
-        wrapper.slotChildren = Object.freeze(toVNodes(
-          wrapper.$createElement,
-          this.childNodes
-        ));
-        wrapper.$mount();
-        this.shadowRoot.appendChild(wrapper.$el);
-      } else {
-        callHooks(this.vueComponent, 'activated');
-      }
-    }
-
-    disconnectedCallback () {
-      callHooks(this.vueComponent, 'deactivated');
-    }
-  }
-
-  if (!isAsync) {
-    initialize(Component);
-  }
-
-  return CustomElement
-}
-
-/* harmony default export */ var vue_wc_wrapper = (wrap);
-
-// EXTERNAL MODULE: ./node_modules/_css-loader@1.0.1@css-loader/lib/css-base.js
-var css_base = __webpack_require__("690e");
-
-// EXTERNAL MODULE: ./node_modules/_vue-style-loader@4.1.2@vue-style-loader/lib/addStylesShadow.js + 1 modules
-var addStylesShadow = __webpack_require__("565c");
-
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.0@vue-loader/lib/runtime/componentNormalizer.js
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-// CONCATENATED MODULE: ./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7a4e94c4-vue-loader-template"}!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js??ref--0-0!./node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./src/lib/calendar.vue?vue&type=template&id=c96645ca&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"position":"relative"}},[_c('div',{class:_vm.status? 'calendar-wrapper calendar-wrapper-active' : 'calendar-wrapper'},[_c('div',{attrs:{"id":"calendar-content"}},[_c('div',{attrs:{"id":"calendar-title"}},[_c('div',{staticClass:"calendar-prev",on:{"click":_vm.prev}}),_c('div',{staticClass:"calendar-title-date"},[_c('div',{staticClass:"calendar-title-date-year"},_vm._l((_vm.translateYearY),function(item,index){return _c('ul',{key:index,style:({'transform': 'translateY(' + _vm.translateYearY[index] + ')'})},_vm._l((_vm.yearList),function(v,i){return _c('li',{key:i},[_c('span',[_vm._v(_vm._s(v))])])}),0)}),0),_c('div',[_vm._v(" - ")]),_c('div',{staticClass:"calendar-title-date-month"},[_c('ul',{style:({'transform': 'translate3d(0, ' + _vm.translateMonthY + ', 0)'})},_vm._l((_vm.monthList),function(item,index){return _c('li',{key:index},[_c('span',[_vm._v(_vm._s(item))])])}),0)])]),_c('div',{staticClass:"calendar-next",on:{"click":_vm.next}})]),_c('div',{attrs:{"id":"calendar-week"}},[_c('ul',_vm._l((_vm.weekList),function(item,index){return _c('li',{key:index},[_c('span',[_vm._v(_vm._s(item))])])}),0)]),_c('ul',_vm._l((_vm.dateList),function(item,index){return _c('li',{key:index,class:[item.checked? 'calendar-radio-checked': 'calendar-radio', item.belong?'calendar-day-enable': 'calendar-day-disabled', item.checkboxChecked? 'calendar-checkbox-checked': '', item.checkboxSelected? 'calendar-day-checkboxSelected': '']},[_c('div',{staticClass:"calendar-day",on:{"click":function($event){return _vm.changeSelectedDay(item)}}},[_vm._v("\n            "+_vm._s(item.day)+"\n            "),(_vm.type === 'checkbox' && item.checkboxChecked)?_c('p',[_vm._v(_vm._s(item.checkboxTxt))]):_vm._e()])])}),0)])]),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.status),expression:"status"}],staticClass:"gray-wrapper",on:{"click":function($event){_vm.status=false}}})])}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/lib/calendar.vue?vue&type=template&id=c96645ca&scoped=true&
-
-// EXTERNAL MODULE: ./node_modules/_@babel_runtime-corejs2@7.3.4@@babel/runtime-corejs2/core-js/json/stringify.js
-var stringify = __webpack_require__("f46d");
-var stringify_default = /*#__PURE__*/__webpack_require__.n(stringify);
-
-// EXTERNAL MODULE: ./node_modules/_core-js@2.6.5@core-js/modules/es6.regexp.replace.js
-var es6_regexp_replace = __webpack_require__("f91a");
-
-// EXTERNAL MODULE: ./node_modules/_@babel_runtime-corejs2@7.3.4@@babel/runtime-corejs2/core-js/parse-int.js
-var parse_int = __webpack_require__("5fa9");
-var parse_int_default = /*#__PURE__*/__webpack_require__.n(parse_int);
-
-// EXTERNAL MODULE: ./node_modules/_core-js@2.6.5@core-js/modules/es6.regexp.match.js
-var es6_regexp_match = __webpack_require__("f10e");
-
-// EXTERNAL MODULE: ./node_modules/_core-js@2.6.5@core-js/modules/es6.regexp.to-string.js
-var es6_regexp_to_string = __webpack_require__("48fb");
-
-// EXTERNAL MODULE: ./node_modules/_core-js@2.6.5@core-js/modules/es6.regexp.split.js
-var es6_regexp_split = __webpack_require__("ea65");
-
-// CONCATENATED MODULE: ./src/lib/calendar.js
-
-
-
-
-class calendar_Calendar {
-  /* eslint-disable */
-  constructor() {
-    this.cache = {};
-    this.dayList = [];
-    this.maxLen = 42;
-  }
-
-  getDay(y, m) {
-    var mday = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
-    if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0) //判断是否是闰月 
-      mday[1] = 29;
-    return mday[m - 1];
-  }
-
-  getWeek(y, m, d) {
-    return parse_int_default()(new Date(`${y}-${m}-${d}`).getDay());
-  }
-
-  getName(y, m, d) {
-    return y + "-" + m + "-" + d;
-  }
-  /**
-   * @desc 上一个月
-   */
-
-
-  getPrev(y, m) {
-    if (m - 1 == 0) {
-      return {
-        y: y - 1,
-        m: 12,
-        d: this.getDay(y - 1, 12)
-      };
-    } else {
-      return {
-        y: y,
-        m: m - 1,
-        d: this.getDay(y, m - 1)
-      };
-    }
-  }
-  /**
-   * @desc 下一个月
-   */
-
-
-  getNext(y, m) {
-    if (m + 1 > 12) {
-      return {
-        y: y + 1,
-        m: 1,
-        d: this.getDay(y + 1, 1)
-      };
-    } else {
-      return {
-        y: y,
-        m: m + 1,
-        d: this.getDay(y, m + 1)
-      };
-    }
-
-    ;
-  }
-
-  setDay(date, day, belong) {
-    if (date) {
-      var tmp = date.match(/\d+/gi);
-      this.dayList.push({
-        date: date,
-        day: day,
-        week: this.getWeek(+tmp[0], +tmp[1], +tmp[2]),
-        belong: !belong
-      });
-    } else {
-      this.dayList.push({
-        date: "",
-        day: "",
-        week: "",
-        belong: false
-      });
-    }
-  }
-
-  clear() {
-    this.dayList = [];
-  }
-
-  setDate(year, month, bool) {
-    year = year || new Date().getFullYear();
-    month = month || new Date().getMonth() + 1;
-    var cache_name = year + "-" + month;
-
-    if (this.cache[cache_name]) {
-      this.dayList = this.cache[cache_name];
-      return this;
-    }
-
-    this.clear();
-    var name = null,
-        index = 0,
-        dayTotal = this.getDay(year, month),
-        weekFirst = this.getWeek(year, month, 1); //上月的数据
-
-    var prev = this.getPrev(year, month),
-        prevDate = prev.d - weekFirst + 1;
-
-    for (var i = 0; i < weekFirst; i++) {
-      if (!bool) {
-        name = this.getName(prev.y, prev.m, prevDate);
-        this.setDay(name, prevDate, 1);
-      } else {
-        this.setDay("", prevDate, 1);
-      }
-
-      prevDate++;
-      index++;
-    } //本月数据
-
-
-    for (var _i = 1; _i <= dayTotal; _i++) {
-      name = this.getName(year, month, _i);
-      this.setDay(name, _i);
-      index++;
-    } //下月数据
-
-
-    var next = this.getNext(year, month),
-        day = 1;
-
-    while (index < this.maxLen) {
-      if (!bool) {
-        name = this.getName(next.y, next.m, day);
-        this.setDay(name, day, 1);
-      } else {
-        this.setDay("", day, 1);
-      }
-
-      index++;
-      day++;
-    }
-
-    ; //缓存
-
-    this.cache[cache_name] = JSON.parse(stringify_default()(this.dayList));
-    return this;
-  }
-
-  getDayList(bool) {
-    var list = JSON.parse(stringify_default()(this.dayList));
-
-    if (bool) {
-      var len = 7,
-          count = 0;
-
-      for (var i = list.length - 1; len >= 1; i--, len--) {
-        if (list[i]['belong']) {
-          count++;
-        }
-      }
-
-      if (count == 7) {
-        len = 7;
-
-        while (len) {
-          list.pop();
-          len--;
-        }
-      }
-    }
-
-    return list;
-  }
-
-}
-
-/* harmony default export */ var calendar = (calendar_Calendar);
-// CONCATENATED MODULE: ./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js??ref--12-0!./node_modules/_thread-loader@2.1.2@thread-loader/dist/cjs.js!./node_modules/_babel-loader@8.0.5@babel-loader/lib!./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js??ref--0-0!./node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./src/lib/calendar.vue?vue&type=script&lang=js&
-
-
-
-
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * @desc 日历组件
- * @param {string} [selectedDay] - 选中日期，默认为当天
- * @param {string} [selectedLastDay] - 复选时后一个日期
- * @param {string} [currentDate] - 日历当前年月
- * @param {array} [weekList] - 星期列表
- * @param {array} [dateList] - 日期列表
- * @param {array} [monthList] - 月份列表
- * @param {array} [yearList] - 年份列表
- * @param {number} [liHeight] - 默认高度
- * @param {string} [translateMonthY] - 月份移动值
- * @param {array} [translateYearY] - 年份移动值数组
- */
-
-/**
- * @desc 日历组件-props
- *
- * options - 日历可控项
- * @param {string} [type] - radio: 单选  checkbox: 复选  picker: 滚动
- * @param {string} [startDay] - 设置选定日期(仅针对radio和picker有效) eg："2019-3-3"
- * @param {array} [checkboxTxt] - 复选文本(建议不超过两个字) default: ["入住", "离店"]
- * @param {boolean} [checkboxBefore] - 复选(是否允许选择当前日期之前的日期, 同时也会禁用往当前日期前翻页的功能) default: false
- */
-
-/* harmony default export */ var calendarvue_type_script_lang_js_ = ({
-  name: "vue-super-calendar",
-  props: {
-    type: {
-      type: String,
-      default: "radio"
-    },
-    startDay: {
-      type: String,
-      default: ""
-    },
-    checkboxTxt: {
-      type: Array,
-      default: () => {
-        return ["入住", "离店"];
-      }
-    },
-    checkboxBefore: {
-      type: Boolean,
-      default: false
-    }
-  },
-
-  data() {
-    return {
-      calendar: null,
-      selectedDay: this.type !== "checkbox" ? new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate() : null,
-      selectedLastDay: "",
-      currentDate: new Date().getFullYear() + "-" + (new Date().getMonth() + 1),
-      weekList: ["日", "一", "二", "三", "四", "五", "六"],
-      dateList: [],
-      monthList: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
-      yearList: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-      liHeight: 25,
-      translateMonthY: -new Date().getMonth() * 25 + "px",
-      translateYearY: [-new Date().getFullYear().toString().split("")[0] * 25 + "px", -new Date().getFullYear().toString().split("")[1] * 25 + "px", -new Date().getFullYear().toString().split("")[2] * 25 + "px", -new Date().getFullYear().toString().split("")[3] * 25 + "px"],
-      today: "",
-      status: false
-    };
-  },
-
-  methods: {
-    /* eslint-disable */
-    show() {
-      this.status = true;
-    },
-
-    hide() {
-      this.status = false;
-    },
-
-    //获取当天年月日
-    getToday() {
-      this.today = new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate();
-    },
-
-    //年月份切换
-    translateYM() {
-      var _tmp = this.currentDate.match(/\d+/gi);
-
-      _tmp[0].split("").map((item, index) => {
-        this.translateYearY[index] = -+item * this.liHeight + "px";
-      });
-
-      this.monthList.map(item => {
-        if (_tmp[1] == parse_int_default()(item)) {
-          this.translateMonthY = -(+_tmp[1] - 1) * this.liHeight + "px";
-        }
-      });
-    },
-
-    //上一月
-    prev() {
-      this.changeMonth("getPrev");
-    },
-
-    //下一月
-    next() {
-      this.changeMonth("getNext");
-    },
-
-    //更换月份
-    changeMonth(type) {
-      var tmp = this.currentDate.match(/\d+/gi);
-
-      if (this.type === "checkbox") {
-        if (!this.checkboxBefore) {
-          //不可选择当前日期之前的日期
-          if (type === "getPrev" && new Date(+tmp[0] + "/" + tmp[1]) < new Date(this.today.replace(/\-/g, "/"))) {
-            alert("不可选当前日期之前的月份");
-          } else {
-            var newDate = this.calendar[type](+tmp[0], +tmp[1]);
-            this.currentDate = `${newDate.y}-${newDate.m}`;
-            this.calendar.setDate(newDate.y, newDate.m, true);
-            var list = this.calendar.getDayList();
-            this.dateList = JSON.parse(stringify_default()(list));
-            this.dateList.map(item => {
-              item.checkboxChecked = this.selectedDay && item.date === this.selectedDay || this.selectedLastDay && item.date === this.selectedLastDay ? true : false;
-
-              if (this.selectedDay && item.date === this.selectedDay) {
-                item.checkboxTxt = this.checkboxTxt[0];
-              }
-
-              if (this.selectedLastDay && item.date === this.selectedLastDay) {
-                item.checkboxTxt = this.checkboxTxt[1];
-              }
-
-              item.belong = new Date(item.date.replace(/\-/g, "/")) < new Date(this.today.replace(/\-/g, "/")) ? false : true;
-
-              if (this.selectedLastDay && this.selectedDay && new Date(item.date.replace(/\-/g, "/")) <= new Date(this.selectedLastDay.replace(/\-/g, "/")) && new Date(item.date.replace(/\-/g, "/")) >= new Date(this.selectedDay.replace(/\-/g, "/"))) {
-                item.checkboxSelected = true;
-              } else {
-                item.checkboxSelected = false;
-              }
-            });
-          }
-        } else {
-          //可选择所有日期
-          var _newDate = this.calendar[type](+tmp[0], +tmp[1]);
-
-          this.currentDate = `${_newDate.y}-${_newDate.m}`;
-          this.calendar.setDate(_newDate.y, _newDate.m);
-
-          var _list = this.calendar.getDayList();
-
-          this.dateList = JSON.parse(stringify_default()(_list));
-          this.dateList.map(item => {
-            item.checkboxChecked = this.selectedDay && item.date === this.selectedDay || this.selectedLastDay && item.date === this.selectedLastDay ? true : false;
-
-            if (this.selectedDay && item.date === this.selectedDay) {
-              item.checkboxTxt = this.checkboxTxt[0];
-            }
-
-            if (this.selectedLastDay && item.date === this.selectedLastDay) {
-              item.checkboxTxt = this.checkboxTxt[1];
-            }
-
-            if (this.selectedLastDay && this.selectedDay && new Date(item.date.replace(/\-/g, "/")) <= new Date(this.selectedLastDay.replace(/\-/g, "/")) && new Date(item.date.replace(/\-/g, "/")) >= new Date(this.selectedDay.replace(/\-/g, "/"))) {
-              item.checkboxSelected = true;
-            } else {
-              item.checkboxSelected = false;
-            }
-          });
-        }
-      } else {
-        var _newDate2 = this.calendar[type](+tmp[0], +tmp[1]);
-
-        this.currentDate = `${_newDate2.y}-${_newDate2.m}`;
-        this.calendar.setDate(_newDate2.y, _newDate2.m);
-
-        var _list2 = this.calendar.getDayList();
-
-        this.dateList = JSON.parse(stringify_default()(_list2));
-        this.dateList.map(item => {
-          item.checked = item.date === this.selectedDay ? true : false;
-        });
-      } //年份、月份切换
-
-
-      this.translateYM();
-    },
-
-    changeSelectedDay(i) {
-      var tmp = i.date.match(/\d+/gi);
-
-      if (this.type === "checkbox" && i.belong) {
-        //当不允许选择当天之前日期时
-        if (!this.selectedDay || this.selectedLastDay) {
-          //当未选择或选择完毕两项时
-          this.selectedDay = i.date;
-          i.checkboxTxt = this.checkboxTxt[0];
-          this.selectedLastDay = "";
-          this.dateList.map(item => {
-            item.checkboxSelected = false;
-          });
-          i.checkboxSelected = true;
-        } else if (new Date(i.date.replace(/\-/g, "/")) < new Date(this.selectedDay.replace(/\-/g, "/"))) {
-          //当选择的日期在之前
-          this.selectedDay = i.date;
-          i.checkboxTxt = this.checkboxTxt[0];
-          this.dateList.map(item => {
-            item.checkboxSelected = false;
-          });
-          i.checkboxSelected = true;
-        } else if (this.selectedDay !== i.date) {
-          this.selectedLastDay = i.date;
-          i.checkboxTxt = this.checkboxTxt[1];
-          this.dateList.map(item => {
-            if (this.selectedLastDay && this.selectedDay && new Date(item.date.replace(/\-/g, "/")) <= new Date(this.selectedLastDay.replace(/\-/g, "/")) && new Date(item.date.replace(/\-/g, "/")) >= new Date(this.selectedDay.replace(/\-/g, "/"))) {
-              item.checkboxSelected = true;
-            } else {
-              item.checkboxSelected = false;
-            }
-          });
-        }
-
-        if (this.selectedDay && this.selectedLastDay) {
-          this.$emit("on-multi-click", this.selectedDay, this.selectedLastDay);
-          this.status = false;
-        }
-
-        this.dateList.map(item => {
-          item.checkboxChecked = this.selectedDay && item.date === this.selectedDay || this.selectedLastDay && item.date === this.selectedLastDay ? true : false;
-        });
-      } else if (this.type === "picker") {} else {
-        //单选
-        if (i.belong) {
-          this.selectedDay = i.date;
-          this.dateList.map(item => {
-            item.checked = item.date === this.selectedDay ? true : false;
-          });
-        } // alert("选择了" + i.date);
-
-
-        this.$emit("on-single-click", i.date);
-      }
-
-      this.$forceUpdate();
-    },
-
-    //多选情况初始化
-    checkboxInit() {
-      if (this.checkboxBefore) {//允许选择当天之前日期
-      } else {
-        //不允许选择当天之前日期并隐去非可选日期
-        this.dateList.map(item => {
-          item.checkboxBefore = new Date(item.date.replace(/\-/g, "/")) < new Date(this.today.replace(/\-/g, "/")) ? false : true;
-          item.belong = new Date(item.date.replace(/\-/g, "/")) < new Date(this.today.replace(/\-/g, "/")) ? false : true;
-        });
-      }
-    },
-
-    //获取日期列表
-    getList() {
-      var list = this.calendar.getDayList();
-      this.dateList = JSON.parse(stringify_default()(list));
-      this.dateList.map(item => {
-        item.checked = item.date === this.selectedDay ? true : false;
-        item.checkboxTxt = "";
-      });
-    }
-
-  },
-
-  mounted() {
-    /* eslint-disable */
-    this.calendar = new calendar();
-    this.getToday();
-
-    switch (this.type) {
-      case "checkbox":
-        this.checkboxBefore ? this.calendar.setDate(new Date().getFullYear(), new Date().getMonth() + 1) : this.calendar.setDate(new Date().getFullYear(), new Date().getMonth() + 1, true);
-        this.getList();
-        this.checkboxInit();
-        break;
-
-      default:
-        if (this.startDay) {
-          var tmp = this.startDay.match(/\d+/gi);
-
-          if (tmp.length !== 3 || tmp[0].length !== 4 || tmp[1].length > 2 || tmp[1].length < 0 || tmp[2].length > 2 || tmp[2].length < 0) {
-            //当输入的选定时间不符合规则时抛出异常
-            throw new Error("请输入规定字符串---2019/3/3");
-          } else {
-            this.calendar.setDate(+tmp[0], +tmp[1]);
-            this.getList();
-            this.currentDate = `${tmp[0]}-${tmp[1]}`;
-            this.changeSelectedDay({
-              date: this.startDay,
-              belong: true
-            }); //年份、月份切换
-
-            this.translateYM();
-          }
-        } else {
-          this.calendar.setDate();
-          this.getList();
-        }
-
-    }
-  }
-
-});
-// CONCATENATED MODULE: ./src/lib/calendar.vue?vue&type=script&lang=js&
- /* harmony default export */ var lib_calendarvue_type_script_lang_js_ = (calendarvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/lib/calendar.vue
-
-
-
-function injectStyles (context) {
-  
-  var style0 = __webpack_require__("3fbb")
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var component = normalizeComponent(
-  lib_calendarvue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "c96645ca",
-  null
-  ,true
-)
-
-/* harmony default export */ var lib_calendar = (component.exports);
-// CONCATENATED MODULE: ./src/lib?shadow
- // 导入组件
-
-lib_calendar.install = function (Vue) {
-  Vue.component(lib_calendar.name, lib_calendar);
-};
-
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(lib_calendar);
-}
-
-/* harmony default export */ var lib_shadow = (lib_calendar);
-// CONCATENATED MODULE: ./node_modules/_@vue_cli-service@3.5.1@@vue/cli-service/lib/commands/build/entry-wc.js
-
-
-
-
-// runtime shared by every component chunk
-
-
-
-
-
-window.customElements.define('vue-super-calendar', vue_wc_wrapper(external_Vue_default.a, lib_shadow))
 
 /***/ }),
 
@@ -2108,13 +928,6 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 /***/ }),
 
-/***/ "8bbf":
-/***/ (function(module, exports) {
-
-module.exports = Vue;
-
-/***/ }),
-
 /***/ "9081":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2190,6 +1003,13 @@ module.exports = function (it) {
 
 /***/ }),
 
+/***/ "ab34":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "ae63":
 /***/ (function(module, exports) {
 
@@ -2242,6 +1062,793 @@ module.exports = function (it) {
 
 /***/ }),
 
+/***/ "b874":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/_@vue_cli-service@3.5.1@@vue/cli-service/lib/commands/build/setPublicPath.js
+// This file is imported into lib/wc client bundles.
+
+if (typeof window !== 'undefined') {
+  var setPublicPath_i
+  if ((setPublicPath_i = window.document.currentScript) && (setPublicPath_i = setPublicPath_i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
+    __webpack_require__.p = setPublicPath_i[1] // eslint-disable-line
+  }
+}
+
+// Indicate to webpack that this file can be concatenated
+/* harmony default export */ var setPublicPath = (null);
+
+// EXTERNAL MODULE: ./node_modules/_core-js@2.6.5@core-js/modules/es6.function.name.js
+var es6_function_name = __webpack_require__("3a23");
+
+// CONCATENATED MODULE: ./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7a4e94c4-vue-loader-template"}!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js??ref--0-0!./node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./src/lib/calendar.vue?vue&type=template&id=c96645ca&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"position":"relative"}},[_c('div',{class:_vm.status? 'calendar-wrapper calendar-wrapper-active' : 'calendar-wrapper'},[_c('div',{attrs:{"id":"calendar-content"}},[_c('div',{attrs:{"id":"calendar-title"}},[_c('div',{staticClass:"calendar-prev",on:{"click":_vm.prev}}),_c('div',{staticClass:"calendar-title-date"},[_c('div',{staticClass:"calendar-title-date-year"},_vm._l((_vm.translateYearY),function(item,index){return _c('ul',{key:index,style:({'transform': 'translateY(' + _vm.translateYearY[index] + ')'})},_vm._l((_vm.yearList),function(v,i){return _c('li',{key:i},[_c('span',[_vm._v(_vm._s(v))])])}),0)}),0),_c('div',[_vm._v(" - ")]),_c('div',{staticClass:"calendar-title-date-month"},[_c('ul',{style:({'transform': 'translate3d(0, ' + _vm.translateMonthY + ', 0)'})},_vm._l((_vm.monthList),function(item,index){return _c('li',{key:index},[_c('span',[_vm._v(_vm._s(item))])])}),0)])]),_c('div',{staticClass:"calendar-next",on:{"click":_vm.next}})]),_c('div',{attrs:{"id":"calendar-week"}},[_c('ul',_vm._l((_vm.weekList),function(item,index){return _c('li',{key:index},[_c('span',[_vm._v(_vm._s(item))])])}),0)]),_c('ul',_vm._l((_vm.dateList),function(item,index){return _c('li',{key:index,class:[item.checked? 'calendar-radio-checked': 'calendar-radio', item.belong?'calendar-day-enable': 'calendar-day-disabled', item.checkboxChecked? 'calendar-checkbox-checked': '', item.checkboxSelected? 'calendar-day-checkboxSelected': '']},[_c('div',{staticClass:"calendar-day",on:{"click":function($event){return _vm.changeSelectedDay(item)}}},[_vm._v("\n            "+_vm._s(item.day)+"\n            "),(_vm.type === 'checkbox' && item.checkboxChecked)?_c('p',[_vm._v(_vm._s(item.checkboxTxt))]):_vm._e()])])}),0)])]),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.status),expression:"status"}],staticClass:"gray-wrapper",on:{"click":function($event){_vm.status=false}}})])}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/lib/calendar.vue?vue&type=template&id=c96645ca&scoped=true&
+
+// EXTERNAL MODULE: ./node_modules/_@babel_runtime-corejs2@7.3.4@@babel/runtime-corejs2/core-js/json/stringify.js
+var stringify = __webpack_require__("f46d");
+var stringify_default = /*#__PURE__*/__webpack_require__.n(stringify);
+
+// EXTERNAL MODULE: ./node_modules/_core-js@2.6.5@core-js/modules/es6.regexp.replace.js
+var es6_regexp_replace = __webpack_require__("f91a");
+
+// EXTERNAL MODULE: ./node_modules/_@babel_runtime-corejs2@7.3.4@@babel/runtime-corejs2/core-js/parse-int.js
+var parse_int = __webpack_require__("5fa9");
+var parse_int_default = /*#__PURE__*/__webpack_require__.n(parse_int);
+
+// EXTERNAL MODULE: ./node_modules/_core-js@2.6.5@core-js/modules/es6.regexp.match.js
+var es6_regexp_match = __webpack_require__("f10e");
+
+// EXTERNAL MODULE: ./node_modules/_core-js@2.6.5@core-js/modules/es6.regexp.to-string.js
+var es6_regexp_to_string = __webpack_require__("48fb");
+
+// EXTERNAL MODULE: ./node_modules/_core-js@2.6.5@core-js/modules/es6.regexp.split.js
+var es6_regexp_split = __webpack_require__("ea65");
+
+// CONCATENATED MODULE: ./node_modules/_@babel_runtime-corejs2@7.3.4@@babel/runtime-corejs2/helpers/esm/classCallCheck.js
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+// EXTERNAL MODULE: ./node_modules/_@babel_runtime-corejs2@7.3.4@@babel/runtime-corejs2/core-js/object/define-property.js
+var define_property = __webpack_require__("431d");
+var define_property_default = /*#__PURE__*/__webpack_require__.n(define_property);
+
+// CONCATENATED MODULE: ./node_modules/_@babel_runtime-corejs2@7.3.4@@babel/runtime-corejs2/helpers/esm/createClass.js
+
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+
+    define_property_default()(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+// CONCATENATED MODULE: ./src/lib/calendar.js
+
+
+
+
+
+
+var calendar_Calendar =
+/*#__PURE__*/
+function () {
+  /* eslint-disable */
+  function Calendar() {
+    _classCallCheck(this, Calendar);
+
+    this.cache = {};
+    this.dayList = [];
+    this.maxLen = 42;
+  }
+
+  _createClass(Calendar, [{
+    key: "getDay",
+    value: function getDay(y, m) {
+      var mday = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+      if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0) //判断是否是闰月 
+        mday[1] = 29;
+      return mday[m - 1];
+    }
+  }, {
+    key: "getWeek",
+    value: function getWeek(y, m, d) {
+      return parse_int_default()(new Date("".concat(y, "-").concat(m, "-").concat(d)).getDay());
+    }
+  }, {
+    key: "getName",
+    value: function getName(y, m, d) {
+      return y + "-" + m + "-" + d;
+    }
+    /**
+     * @desc 上一个月
+     */
+
+  }, {
+    key: "getPrev",
+    value: function getPrev(y, m) {
+      if (m - 1 == 0) {
+        return {
+          y: y - 1,
+          m: 12,
+          d: this.getDay(y - 1, 12)
+        };
+      } else {
+        return {
+          y: y,
+          m: m - 1,
+          d: this.getDay(y, m - 1)
+        };
+      }
+    }
+    /**
+     * @desc 下一个月
+     */
+
+  }, {
+    key: "getNext",
+    value: function getNext(y, m) {
+      if (m + 1 > 12) {
+        return {
+          y: y + 1,
+          m: 1,
+          d: this.getDay(y + 1, 1)
+        };
+      } else {
+        return {
+          y: y,
+          m: m + 1,
+          d: this.getDay(y, m + 1)
+        };
+      }
+
+      ;
+    }
+  }, {
+    key: "setDay",
+    value: function setDay(date, day, belong) {
+      if (date) {
+        var tmp = date.match(/\d+/gi);
+        this.dayList.push({
+          date: date,
+          day: day,
+          week: this.getWeek(+tmp[0], +tmp[1], +tmp[2]),
+          belong: !belong
+        });
+      } else {
+        this.dayList.push({
+          date: "",
+          day: "",
+          week: "",
+          belong: false
+        });
+      }
+    }
+  }, {
+    key: "clear",
+    value: function clear() {
+      this.dayList = [];
+    }
+  }, {
+    key: "setDate",
+    value: function setDate(year, month, bool) {
+      year = year || new Date().getFullYear();
+      month = month || new Date().getMonth() + 1;
+      var cache_name = year + "-" + month;
+
+      if (this.cache[cache_name]) {
+        this.dayList = this.cache[cache_name];
+        return this;
+      }
+
+      this.clear();
+      var name = null,
+          index = 0,
+          dayTotal = this.getDay(year, month),
+          weekFirst = this.getWeek(year, month, 1); //上月的数据
+
+      var prev = this.getPrev(year, month),
+          prevDate = prev.d - weekFirst + 1;
+
+      for (var i = 0; i < weekFirst; i++) {
+        if (!bool) {
+          name = this.getName(prev.y, prev.m, prevDate);
+          this.setDay(name, prevDate, 1);
+        } else {
+          this.setDay("", prevDate, 1);
+        }
+
+        prevDate++;
+        index++;
+      } //本月数据
+
+
+      for (var _i = 1; _i <= dayTotal; _i++) {
+        name = this.getName(year, month, _i);
+        this.setDay(name, _i);
+        index++;
+      } //下月数据
+
+
+      var next = this.getNext(year, month),
+          day = 1;
+
+      while (index < this.maxLen) {
+        if (!bool) {
+          name = this.getName(next.y, next.m, day);
+          this.setDay(name, day, 1);
+        } else {
+          this.setDay("", day, 1);
+        }
+
+        index++;
+        day++;
+      }
+
+      ; //缓存
+
+      this.cache[cache_name] = JSON.parse(stringify_default()(this.dayList));
+      return this;
+    }
+  }, {
+    key: "getDayList",
+    value: function getDayList(bool) {
+      var list = JSON.parse(stringify_default()(this.dayList));
+
+      if (bool) {
+        var len = 7,
+            count = 0;
+
+        for (var i = list.length - 1; len >= 1; i--, len--) {
+          if (list[i]['belong']) {
+            count++;
+          }
+        }
+
+        if (count == 7) {
+          len = 7;
+
+          while (len) {
+            list.pop();
+            len--;
+          }
+        }
+      }
+
+      return list;
+    }
+  }]);
+
+  return Calendar;
+}();
+
+/* harmony default export */ var calendar = (calendar_Calendar);
+// CONCATENATED MODULE: ./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js??ref--12-0!./node_modules/_thread-loader@2.1.2@thread-loader/dist/cjs.js!./node_modules/_babel-loader@8.0.5@babel-loader/lib!./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js??ref--0-0!./node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./src/lib/calendar.vue?vue&type=script&lang=js&
+
+
+
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/**
+ * @desc 日历组件
+ * @param {string} [selectedDay] - 选中日期，默认为当天
+ * @param {string} [selectedLastDay] - 复选时后一个日期
+ * @param {string} [currentDate] - 日历当前年月
+ * @param {array} [weekList] - 星期列表
+ * @param {array} [dateList] - 日期列表
+ * @param {array} [monthList] - 月份列表
+ * @param {array} [yearList] - 年份列表
+ * @param {number} [liHeight] - 默认高度
+ * @param {string} [translateMonthY] - 月份移动值
+ * @param {array} [translateYearY] - 年份移动值数组
+ */
+
+/**
+ * @desc 日历组件-props
+ *
+ * options - 日历可控项
+ * @param {string} [type] - radio: 单选  checkbox: 复选  picker: 滚动
+ * @param {string} [startDay] - 设置选定日期(仅针对radio和picker有效) eg："2019-3-3"
+ * @param {array} [checkboxTxt] - 复选文本(建议不超过两个字) default: ["入住", "离店"]
+ * @param {boolean} [checkboxBefore] - 复选(是否允许选择当前日期之前的日期, 同时也会禁用往当前日期前翻页的功能) default: false
+ */
+
+/* harmony default export */ var calendarvue_type_script_lang_js_ = ({
+  name: "vue-super-calendar",
+  props: {
+    type: {
+      type: String,
+      default: "radio"
+    },
+    startDay: {
+      type: String,
+      default: ""
+    },
+    checkboxTxt: {
+      type: Array,
+      default: function _default() {
+        return ["入住", "离店"];
+      }
+    },
+    checkboxBefore: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data: function data() {
+    return {
+      calendar: null,
+      selectedDay: this.type !== "checkbox" ? new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate() : null,
+      selectedLastDay: "",
+      currentDate: new Date().getFullYear() + "-" + (new Date().getMonth() + 1),
+      weekList: ["日", "一", "二", "三", "四", "五", "六"],
+      dateList: [],
+      monthList: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+      yearList: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+      liHeight: 25,
+      translateMonthY: -new Date().getMonth() * 25 + "px",
+      translateYearY: [-new Date().getFullYear().toString().split("")[0] * 25 + "px", -new Date().getFullYear().toString().split("")[1] * 25 + "px", -new Date().getFullYear().toString().split("")[2] * 25 + "px", -new Date().getFullYear().toString().split("")[3] * 25 + "px"],
+      today: "",
+      status: false
+    };
+  },
+  methods: {
+    /* eslint-disable */
+    show: function show() {
+      this.status = true;
+    },
+    hide: function hide() {
+      this.status = false;
+    },
+    //获取当天年月日
+    getToday: function getToday() {
+      this.today = new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate();
+    },
+    //年月份切换
+    translateYM: function translateYM() {
+      var _this = this;
+
+      var _tmp = this.currentDate.match(/\d+/gi);
+
+      _tmp[0].split("").map(function (item, index) {
+        _this.translateYearY[index] = -+item * _this.liHeight + "px";
+      });
+
+      this.monthList.map(function (item) {
+        if (_tmp[1] == parse_int_default()(item)) {
+          _this.translateMonthY = -(+_tmp[1] - 1) * _this.liHeight + "px";
+        }
+      });
+    },
+    //上一月
+    prev: function prev() {
+      this.changeMonth("getPrev");
+    },
+    //下一月
+    next: function next() {
+      this.changeMonth("getNext");
+    },
+    //更换月份
+    changeMonth: function changeMonth(type) {
+      var _this2 = this;
+
+      var tmp = this.currentDate.match(/\d+/gi);
+
+      if (this.type === "checkbox") {
+        if (!this.checkboxBefore) {
+          //不可选择当前日期之前的日期
+          if (type === "getPrev" && new Date(+tmp[0] + "/" + tmp[1]) < new Date(this.today.replace(/\-/g, "/"))) {
+            alert("不可选当前日期之前的月份");
+          } else {
+            var newDate = this.calendar[type](+tmp[0], +tmp[1]);
+            this.currentDate = "".concat(newDate.y, "-").concat(newDate.m);
+            this.calendar.setDate(newDate.y, newDate.m, true);
+            var list = this.calendar.getDayList();
+            this.dateList = JSON.parse(stringify_default()(list));
+            this.dateList.map(function (item) {
+              item.checkboxChecked = _this2.selectedDay && item.date === _this2.selectedDay || _this2.selectedLastDay && item.date === _this2.selectedLastDay ? true : false;
+
+              if (_this2.selectedDay && item.date === _this2.selectedDay) {
+                item.checkboxTxt = _this2.checkboxTxt[0];
+              }
+
+              if (_this2.selectedLastDay && item.date === _this2.selectedLastDay) {
+                item.checkboxTxt = _this2.checkboxTxt[1];
+              }
+
+              item.belong = new Date(item.date.replace(/\-/g, "/")) < new Date(_this2.today.replace(/\-/g, "/")) ? false : true;
+
+              if (_this2.selectedLastDay && _this2.selectedDay && new Date(item.date.replace(/\-/g, "/")) <= new Date(_this2.selectedLastDay.replace(/\-/g, "/")) && new Date(item.date.replace(/\-/g, "/")) >= new Date(_this2.selectedDay.replace(/\-/g, "/"))) {
+                item.checkboxSelected = true;
+              } else {
+                item.checkboxSelected = false;
+              }
+            });
+          }
+        } else {
+          //可选择所有日期
+          var _newDate = this.calendar[type](+tmp[0], +tmp[1]);
+
+          this.currentDate = "".concat(_newDate.y, "-").concat(_newDate.m);
+          this.calendar.setDate(_newDate.y, _newDate.m);
+
+          var _list = this.calendar.getDayList();
+
+          this.dateList = JSON.parse(stringify_default()(_list));
+          this.dateList.map(function (item) {
+            item.checkboxChecked = _this2.selectedDay && item.date === _this2.selectedDay || _this2.selectedLastDay && item.date === _this2.selectedLastDay ? true : false;
+
+            if (_this2.selectedDay && item.date === _this2.selectedDay) {
+              item.checkboxTxt = _this2.checkboxTxt[0];
+            }
+
+            if (_this2.selectedLastDay && item.date === _this2.selectedLastDay) {
+              item.checkboxTxt = _this2.checkboxTxt[1];
+            }
+
+            if (_this2.selectedLastDay && _this2.selectedDay && new Date(item.date.replace(/\-/g, "/")) <= new Date(_this2.selectedLastDay.replace(/\-/g, "/")) && new Date(item.date.replace(/\-/g, "/")) >= new Date(_this2.selectedDay.replace(/\-/g, "/"))) {
+              item.checkboxSelected = true;
+            } else {
+              item.checkboxSelected = false;
+            }
+          });
+        }
+      } else {
+        var _newDate2 = this.calendar[type](+tmp[0], +tmp[1]);
+
+        this.currentDate = "".concat(_newDate2.y, "-").concat(_newDate2.m);
+        this.calendar.setDate(_newDate2.y, _newDate2.m);
+
+        var _list2 = this.calendar.getDayList();
+
+        this.dateList = JSON.parse(stringify_default()(_list2));
+        this.dateList.map(function (item) {
+          item.checked = item.date === _this2.selectedDay ? true : false;
+        });
+      } //年份、月份切换
+
+
+      this.translateYM();
+    },
+    changeSelectedDay: function changeSelectedDay(i) {
+      var _this3 = this;
+
+      var tmp = i.date.match(/\d+/gi);
+
+      if (this.type === "checkbox" && i.belong) {
+        //当不允许选择当天之前日期时
+        if (!this.selectedDay || this.selectedLastDay) {
+          //当未选择或选择完毕两项时
+          this.selectedDay = i.date;
+          i.checkboxTxt = this.checkboxTxt[0];
+          this.selectedLastDay = "";
+          this.dateList.map(function (item) {
+            item.checkboxSelected = false;
+          });
+          i.checkboxSelected = true;
+        } else if (new Date(i.date.replace(/\-/g, "/")) < new Date(this.selectedDay.replace(/\-/g, "/"))) {
+          //当选择的日期在之前
+          this.selectedDay = i.date;
+          i.checkboxTxt = this.checkboxTxt[0];
+          this.dateList.map(function (item) {
+            item.checkboxSelected = false;
+          });
+          i.checkboxSelected = true;
+        } else if (this.selectedDay !== i.date) {
+          this.selectedLastDay = i.date;
+          i.checkboxTxt = this.checkboxTxt[1];
+          this.dateList.map(function (item) {
+            if (_this3.selectedLastDay && _this3.selectedDay && new Date(item.date.replace(/\-/g, "/")) <= new Date(_this3.selectedLastDay.replace(/\-/g, "/")) && new Date(item.date.replace(/\-/g, "/")) >= new Date(_this3.selectedDay.replace(/\-/g, "/"))) {
+              item.checkboxSelected = true;
+            } else {
+              item.checkboxSelected = false;
+            }
+          });
+        }
+
+        if (this.selectedDay && this.selectedLastDay) {
+          this.$emit("on-multi-click", this.selectedDay, this.selectedLastDay);
+          this.status = false;
+        }
+
+        this.dateList.map(function (item) {
+          item.checkboxChecked = _this3.selectedDay && item.date === _this3.selectedDay || _this3.selectedLastDay && item.date === _this3.selectedLastDay ? true : false;
+        });
+      } else if (this.type === "picker") {} else {
+        //单选
+        if (i.belong) {
+          this.selectedDay = i.date;
+          this.dateList.map(function (item) {
+            item.checked = item.date === _this3.selectedDay ? true : false;
+          });
+        } // alert("选择了" + i.date);
+
+
+        this.$emit("on-single-click", i.date);
+      }
+
+      this.$forceUpdate();
+    },
+    //多选情况初始化
+    checkboxInit: function checkboxInit() {
+      var _this4 = this;
+
+      if (this.checkboxBefore) {//允许选择当天之前日期
+      } else {
+        //不允许选择当天之前日期并隐去非可选日期
+        this.dateList.map(function (item) {
+          item.checkboxBefore = new Date(item.date.replace(/\-/g, "/")) < new Date(_this4.today.replace(/\-/g, "/")) ? false : true;
+          item.belong = new Date(item.date.replace(/\-/g, "/")) < new Date(_this4.today.replace(/\-/g, "/")) ? false : true;
+        });
+      }
+    },
+    //获取日期列表
+    getList: function getList() {
+      var _this5 = this;
+
+      var list = this.calendar.getDayList();
+      this.dateList = JSON.parse(stringify_default()(list));
+      this.dateList.map(function (item) {
+        item.checked = item.date === _this5.selectedDay ? true : false;
+        item.checkboxTxt = "";
+      });
+    }
+  },
+  mounted: function mounted() {
+    /* eslint-disable */
+    this.calendar = new calendar();
+    this.getToday();
+
+    switch (this.type) {
+      case "checkbox":
+        this.checkboxBefore ? this.calendar.setDate(new Date().getFullYear(), new Date().getMonth() + 1) : this.calendar.setDate(new Date().getFullYear(), new Date().getMonth() + 1, true);
+        this.getList();
+        this.checkboxInit();
+        break;
+
+      default:
+        if (this.startDay) {
+          var tmp = this.startDay.match(/\d+/gi);
+
+          if (tmp.length !== 3 || tmp[0].length !== 4 || tmp[1].length > 2 || tmp[1].length < 0 || tmp[2].length > 2 || tmp[2].length < 0) {
+            //当输入的选定时间不符合规则时抛出异常
+            throw new Error("请输入规定字符串---2019/3/3");
+          } else {
+            this.calendar.setDate(+tmp[0], +tmp[1]);
+            this.getList();
+            this.currentDate = "".concat(tmp[0], "-").concat(tmp[1]);
+            this.changeSelectedDay({
+              date: this.startDay,
+              belong: true
+            }); //年份、月份切换
+
+            this.translateYM();
+          }
+        } else {
+          this.calendar.setDate();
+          this.getList();
+        }
+
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/lib/calendar.vue?vue&type=script&lang=js&
+ /* harmony default export */ var lib_calendarvue_type_script_lang_js_ = (calendarvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/lib/calendar.vue?vue&type=style&index=0&id=c96645ca&scoped=true&lang=css&
+var calendarvue_type_style_index_0_id_c96645ca_scoped_true_lang_css_ = __webpack_require__("3fbb");
+
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.0@vue-loader/lib/runtime/componentNormalizer.js
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+// CONCATENATED MODULE: ./src/lib/calendar.vue
+
+
+
+
+
+
+/* normalize component */
+
+var component = normalizeComponent(
+  lib_calendarvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  "c96645ca",
+  null
+  
+)
+
+/* harmony default export */ var lib_calendar = (component.exports);
+// CONCATENATED MODULE: ./src/lib/index.js
+
+ // 导入组件
+
+lib_calendar.install = function (Vue) {
+  Vue.component(lib_calendar.name, lib_calendar);
+};
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(lib_calendar);
+}
+
+/* harmony default export */ var lib = (lib_calendar);
+// CONCATENATED MODULE: ./node_modules/_@vue_cli-service@3.5.1@@vue/cli-service/lib/commands/build/entry-lib.js
+
+
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (lib);
+
+
+
+/***/ }),
+
 /***/ "b915":
 /***/ (function(module, exports) {
 
@@ -2268,23 +1875,6 @@ module.exports = function (it) {
   return is ? document.createElement(it) : {};
 };
 
-
-/***/ }),
-
-/***/ "bf5a":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("da94");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add CSS to Shadow Root
-var add = __webpack_require__("565c").default
-module.exports.__inject__ = function (shadowRoot) {
-  add("444083a4", content, shadowRoot)
-};
 
 /***/ }),
 
@@ -2476,21 +2066,6 @@ module.exports = function (it) {
 
 /***/ }),
 
-/***/ "da94":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("690e")(false);
-// imports
-
-
-// module
-exports.push([module.i, "div[data-v-c96645ca]{font-family:Arial,Times New Roman,Microsoft YaHei,SimHei}.gray-wrapper[data-v-c96645ca]{position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.5);z-index:9}.calendar-wrapper[data-v-c96645ca]{position:fixed;left:0;right:0;bottom:-430px;width:100%;max-width:600px;height:430px;z-index:99;overflow:hidden;background:#fff;-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;-webkit-transform:translateY(0);transform:translateY(0)}.calendar-wrapper-active[data-v-c96645ca]{-webkit-transform:translateY(-430px);transform:translateY(-430px)}#calendar-content[data-v-c96645ca]{background:#fff}#calendar-title[data-v-c96645ca]{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 20px;font-size:22px;font-weight:500;height:50px;color:#000;background:#fff;-webkit-box-shadow:0 2px 6px 0 #dde4eb;box-shadow:0 2px 6px 0 #dde4eb}#calendar-title[data-v-c96645ca],.calendar-title-date[data-v-c96645ca]{display:-webkit-box;display:-ms-flexbox;display:flex}.calendar-title-date-month[data-v-c96645ca],.calendar-title-date-year[data-v-c96645ca]{height:25px;line-height:25px;overflow:hidden}.calendar-title-date-year[data-v-c96645ca]{display:-webkit-box;display:-ms-flexbox;display:flex}.calendar-title-date ul[data-v-c96645ca]{height:25px;-webkit-transition:all .5s;transition:all .5s}.calendar-title-date ul>li[data-v-c96645ca]{list-style:none}.calendar-prev[data-v-c96645ca]{border-left:2px solid #000;border-bottom:2px solid #000}.calendar-next[data-v-c96645ca],.calendar-prev[data-v-c96645ca]{width:10px;height:10px;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.calendar-next[data-v-c96645ca]{border-top:2px solid #000;border-right:2px solid #000}#calendar-week>ul>li[data-v-c96645ca]{color:#999}#calendar-content>ul[data-v-c96645ca],#calendar-week>ul[data-v-c96645ca]{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}#calendar-content>ul>li[data-v-c96645ca],#calendar-week>ul>li[data-v-c96645ca]{-webkit-box-flex:0;-ms-flex:0 0 14.2857%;flex:0 0 14.2857%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:50px;list-style:none}#calendar-content>ul>li[data-v-c96645ca]{margin-top:4px}.calendar-radio-checked[data-v-c96645ca]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.calendar-checkbox-checked .calendar-day[data-v-c96645ca],.calendar-radio-checked .calendar-day[data-v-c96645ca]{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;color:#fff;background:#00c293;-webkit-box-shadow:0 2px 6px 0 #31dbb2;box-shadow:0 2px 6px 0 #31dbb2;border-radius:4px}.calendar-day[data-v-c96645ca]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;height:100%}.calendar-day>p[data-v-c96645ca]{text-align:center;font-size:12px}.calendar-day-enable[data-v-c96645ca]{color:#000}.calendar-day-disabled[data-v-c96645ca]{color:#e3e3e3;background:#fff}.calendar-day-checkboxSelected[data-v-c96645ca]{color:#000;background:#b9fff5}", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "e2d3":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2524,6 +2099,18 @@ var trim = exporter.trim = function (string, TYPE) {
 };
 
 module.exports = exporter;
+
+
+/***/ }),
+
+/***/ "e432":
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__("2675");
+var $Object = __webpack_require__("836e").Object;
+module.exports = function defineProperty(it, key, desc) {
+  return $Object.defineProperty(it, key, desc);
+};
 
 
 /***/ }),
@@ -2889,4 +2476,4 @@ __webpack_require__("c5aa")('replace', 2, function (defined, REPLACE, $replace, 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=vue-super-calendar.js.map
+//# sourceMappingURL=vue-super-calendar.common.js.map
