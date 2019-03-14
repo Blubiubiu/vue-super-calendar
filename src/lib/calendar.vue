@@ -81,7 +81,7 @@ import Calendar from "./calendar.js";
  */
 
 export default {
-  name: "vue-super-calendar",
+  name: "vueCalendar",
   props: {
     type: {
       type: String,
