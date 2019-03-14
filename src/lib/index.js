@@ -1,11 +1,9 @@
 import vueCalendar from './calendar.vue' // 导入组件
 
-const calendar = {
-    install(Vue, options) {
-        Vue.component(vueCalendar.name, vueCalendar)
-    }
+vueCalendar.install = function (Vue) {
+    Vue.component(vueCalendar.name, vueCalendar)
 }
 if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(calendar);
+    window.Vue.use(vueCalendar);
 }
-export default calendar
+export default vueCalendar
