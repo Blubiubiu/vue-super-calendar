@@ -450,6 +450,13 @@ export default {
 };
 </script>
 
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+</style>
+
 <style scoped>
 div {
   font-family: Arial, "Times New Roman", "Microsoft YaHei", SimHei;
