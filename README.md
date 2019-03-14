@@ -29,7 +29,7 @@ Vue.use(vueCalendar)
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 | type | String | radio | radio: 单选  checkbox: 复选  |
-| startDay | String | "" | 设置选定日期(仅针对radio和picker有效) eg："2019-3-3" |
+| startDay | String | "" | 设置选定日期(仅针对radio有效) eg："2019-3-3" |
 | checkboxTxt | Array | ["入住", "离店"] | 复选文本(建议不超过两个字) |
 | checkboxBefore | Boolean | false | 复选(是否允许选择当前日期之前的日期, 同时也会禁用往当前日期前翻页的功能) |
 
