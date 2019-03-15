@@ -3,6 +3,7 @@
 <a href="https://www.npmjs.org/package/vue-super-calendar">
   <img src="https://img.shields.io/npm/v/vue-super-calendar.svg">
 </a>
+![](https://img.shields.io/npm/dt/vue-super-calendar.svg)
 
 ![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/calendar.gif)
 
