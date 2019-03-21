@@ -30,29 +30,18 @@ Vue.use(vueCalendar)
 
 #### 单选-翻页模式
 
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singlePage1.png)
 ![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singlePage2.png)
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singlePage3.png)
 
 ### 多选-翻页模式
 
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiPage1.png)
 ![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiPage2.png)
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiPage3.png)
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiPage4.png)
 
 ### 单选-滑动模式
 
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singleScroll1.png)
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singleScroll2.png)
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singleScroll3.png)
 ![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singleScroll4.png)
 
 ### 多选-滑动模式
 
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiScroll1.png)
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiScroll2.png)
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiScroll3.png)
 ![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiScroll4.png)
 
 ## options
