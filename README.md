@@ -8,9 +8,6 @@
 </a>
 
 
-![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/calendar.gif)
-
-
 ## Install
 ```shell
 npm install vue-super-calendar --save
