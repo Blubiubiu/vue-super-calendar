@@ -26,20 +26,54 @@ import vueCalendar from 'vue-super-calendar'
 Vue.use(vueCalendar)
 ```
 
+## Some sample pictures
+
+#### 单选-翻页模式
+
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singlePage1.png)
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singlePage2.png)
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singlePage3.png)
+
+### 多选-翻页模式
+
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiPage1.png)
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiPage2.png)
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiPage3.png)
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiPage4.png)
+
+### 单选-滑动模式
+
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singleScroll1.png)
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singleScroll2.png)
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singleScroll3.png)
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/singleScroll4.png)
+
+### 多选-滑动模式
+
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiScroll1.png)
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiScroll2.png)
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiScroll3.png)
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/multiScroll4.png)
 
 ## options
 
 ### props
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
-| type | String | radio | radio: 单选  checkbox: 复选  |
-| startDay | String | "" | 设置选定日期(仅针对radio有效) eg："2019-3-3" |
-| checkboxTxt | Array | ["入住", "离店"] | 复选文本(建议不超过两个字) |
-| checkboxBefore | Boolean | false | 复选(是否允许选择当前日期之前的日期, 同时也会禁用往当前日期前翻页的功能) |
+| type | String | single | single: 单选  multi: 复选  |
+| startDay | String | "" | 设置选定日期(仅针对type = single有效) e.g."2019-3-3" |
+| multiTxt | Array | ["入住", "离店"] | 复选文本(建议不超过两个字) |
+| multiBefore | Boolean | false | 多选(是否允许选择当前日期之前的日期, 同时也会禁用往当前日期前翻页&滑动的功能) |
+| singleBefore | Boolean | false | 单选(仅针对mode = scroll有效)(是否允许选择当前日期之前的日期, 同时也会禁用往当前日期前翻页&滑动的功能) |
+| holiday | Boolean | false | 开启假日高亮颜色模式 |
+| festival | Array | [] | 特殊节日数组 e.g. ["2019-3-3"] |
+| yearBegin | Number | 1 | 加载当前年份前N年(仅针对mode = scroll有效)
+| yearEnd | Number | 1 | 加载当前年份后N年(仅针对mode = scroll有效)
 
 ### functions
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 | on-single-click | Function | val | 返回单选选中日期  |
 | on-multi-click | Function | startVal, endVal | 返回多选日期 |
+| on-warning | Function |  | 禁止选择当前日期时翻到首页 |
 
