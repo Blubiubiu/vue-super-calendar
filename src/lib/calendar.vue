@@ -118,7 +118,7 @@ import Calendar from "./calendar.js";
  *
  * @method common 不区分模式，所有通用
  *
- * @param {string} [type] - single: 单选  multi: 多选 
+ * @param {string} [type] - single: 单选  multi: 多选
  * @param {string} [mode] - page: 翻页模式 scroll: 滑动模式
  * @param {string} [startDay] - 设置选定日期(仅针对single) e.g."2019-3-3"
  * @param {array} [multiTxt] - 多选文本(建议不超过两个字) default: ["入住", "离店"]
@@ -341,7 +341,7 @@ export default {
             new Date(+tmp[0] + "/" + tmp[1]) <
               new Date(this.today.replace(/\-/g, "/"))
           ) {
-            this.$emit("on-warning")
+            this.$emit("on-warning");
           } else {
             const newDate = this.calendar[type](+tmp[0], +tmp[1]);
             this.currentDate = `${newDate.y}-${newDate.m}`;
@@ -569,8 +569,10 @@ export default {
           //单选
           if (i.belong) {
             this.selectedDay = i.date;
-            this.dateListByYear[monthIdx].map(item => {
-              item.checked = item.date === this.selectedDay ? true : false;
+            this.dateListByYear.map(item => {
+              item.map(item1 => {
+                item1.checked = item1.date === this.selectedDay ? true : false;
+              });
             });
           }
           this.$emit("on-single-click", i.date);
@@ -647,8 +649,11 @@ export default {
             });
           } else {
             this.translateDayY =
-              -this.ulList[this.yearBegin * 12 + new Date().getMonth()].offsetTop + "px";
-            this.deltaY = -this.ulList[this.yearBegin * 12 + new Date().getMonth()].offsetTop;
+              -this.ulList[this.yearBegin * 12 + new Date().getMonth()]
+                .offsetTop + "px";
+            this.deltaY = -this.ulList[
+              this.yearBegin * 12 + new Date().getMonth()
+            ].offsetTop;
           }
         });
       } else {
@@ -693,7 +698,9 @@ export default {
                 date: this.startDay,
                 belong: true
               },
-              this.singleBefore ? this.yearBegin * 12 + +tmp[1] - 1: +tmp[1] - new Date().getMonth() - 1
+              this.singleBefore
+                ? this.yearBegin * 12 + +tmp[1] - 1
+                : +tmp[1] - new Date().getMonth() - 1
             );
             //初始化时滑动距离
             this.$nextTick(() => {
@@ -793,7 +800,7 @@ export default {
 }
 </style>
 
-<style>
+<style scoped>
 div {
   font-family: Arial, "Times New Roman", "Microsoft YaHei", SimHei;
 }
