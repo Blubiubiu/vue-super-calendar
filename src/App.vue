@@ -3,15 +3,15 @@
     <h2>翻页模式</h2>
     <h4>单选</h4>
     <div class="demo" @click="calendershow('calenderPageSingle1')">默认</div>
-    <div class="demo" @click="calendershow('calenderPageSingle2')">跳向指定日期 e.g. "2019-3-27"</div>
+    <div class="demo" @click="calendershow('calenderPageSingle2')">跳向指定日期 e.g. "2019/3/27"</div>
     <div class="demo" @click="calendershow('calenderPageSingle3')">周六日颜色</div>
-    <div class="demo" @click="calendershow('calenderPageSingle4')">假日 e.g. ["3-27"]</div>
+    <div class="demo" @click="calendershow('calenderPageSingle4')">假日 e.g. ["3/27"]</div>
     <h4>多选</h4>
     <div class="demo" @click="calendershow('calenderPageMulti1')">默认</div>
     <div class="demo" @click="calendershow('calenderPageMulti2')">文本 e.g. ["开始", "结束"]</div>
     <div class="demo" @click="calendershow('calenderPageMulti3')">允许选择当前日期之前</div>
     <div class="demo" @click="calendershow('calenderPageMulti4')">周六日颜色</div>
-    <div class="demo" @click="calendershow('calenderPageMulti5')">假日 e.g. ["3-27"]</div>
+    <div class="demo" @click="calendershow('calenderPageMulti5')">假日 e.g. ["3/27"]</div>
 
     <vueCalendar
       ref="calenderPageSingle1"
@@ -69,9 +69,9 @@
     <h2>滑动模式</h2>
     <h4>单选</h4>
     <div class="demo" @click="calendershow('calenderScrollSingle1')">默认</div>
-    <div class="demo" @click="calendershow('calenderScrollSingle2')">跳向指定日期 e.g. "2019-3-27"</div>
+    <div class="demo" @click="calendershow('calenderScrollSingle2')">跳向指定日期 e.g. "2019/3/27"</div>
     <div class="demo" @click="calendershow('calenderScrollSingle3')">周六日颜色</div>
-    <div class="demo" @click="calendershow('calenderScrollSingle4')">假日 e.g. ["3-27"]</div>
+    <div class="demo" @click="calendershow('calenderScrollSingle4')">假日 e.g. ["3/27"]</div>
     <div class="demo" @click="calendershow('calenderScrollSingle5')">分别设置可以选择前后N年</div>
     <div class="demo" @click="calendershow('calenderScrollSingle6')">禁止选择当前日期之前</div>
     <h4>多选</h4>
@@ -80,7 +80,7 @@
     <div class="demo" @click="calendershow('calenderScrollMulti3')">分别设置可以选择前后N年</div>
     <div class="demo" @click="calendershow('calenderScrollMulti4')">禁止选择当前日期之前</div>
     <div class="demo" @click="calendershow('calenderScrollMulti5')">周六日颜色</div>
-    <div class="demo" @click="calendershow('calenderScrollMulti6')">假日 e.g. ["3-27"]</div>
+    <div class="demo" @click="calendershow('calenderScrollMulti6')">假日 e.g. ["3/27"]</div>
     <br>
 
     <vueCalendar
@@ -175,7 +175,7 @@ export default {
       optionsPageSingle2: {
         type: "single",
         mode: "page",
-        startDay: "2019-3-27"
+        startDay: "2019/3/27"
       },
       optionsPageSingle3: {
         type: "single",
@@ -185,7 +185,7 @@ export default {
       optionsPageSingle4: {
         type: "single",
         mode: "page",
-        festival: ["3-27"]
+        festival: ["3/27"]
       },
       //翻页多选
       optionsPageMulti1: {
@@ -210,7 +210,7 @@ export default {
       optionsPageMulti5: {
         type: "multi",
         mode: "page",
-        festival: ["3-27"]
+        festival: ["3/27"]
       },
       //滑动单选
       optionsScrollSingle1: {
@@ -220,7 +220,7 @@ export default {
       optionsScrollSingle2: {
         type: "single",
         mode: "scroll",
-        startDay: "2019-3-27"
+        startDay: "2019/3/27"
       },
       optionsScrollSingle3: {
         type: "single",
@@ -230,7 +230,7 @@ export default {
       optionsScrollSingle4: {
         type: "single",
         mode: "scroll",
-        festival: ["3-27"]
+        festival: ["3/27"]
       },
       optionsScrollSingle5: {
         type: "single",
@@ -274,7 +274,7 @@ export default {
       optionsScrollMulti6: {
         type: "multi",
         mode: "scroll",
-        festival: ["3-27"]
+        festival: ["3/27"]
       },
     };
   },

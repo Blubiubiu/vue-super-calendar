@@ -47,18 +47,20 @@ Vue.use(vueCalendar)
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 | type | String | single | single: 单选  multi: 复选  |
-| startDay | String | "" | 设置选定日期(仅针对type = single有效) e.g."2019-3-3" |
+| startDay | String | "" | 设置选定日期(仅针对type = single有效) e.g."2019/3/3" |
 | multiTxt | Array | ["入住", "离店"] | 复选文本(建议不超过两个字) |
 | multiBefore | Boolean | false | 多选(是否允许选择当前日期之前的日期, 同时也会禁用往当前日期前翻页&滑动的功能) |
 | singleBefore | Boolean | false | 单选(仅针对mode = scroll有效)(是否允许选择当前日期之前的日期, 同时也会禁用往当前日期前翻页&滑动的功能) |
 | holiday | Boolean | false | 开启假日高亮颜色模式 |
-| festival | Array | [] | 特殊节日数组 e.g. ["2019-3-3"] |
+| festival | Array | [] | 特殊节日数组 e.g. ["2019/3/3"] |
 | yearBegin | Number | 1 | 加载当前年份前N年(仅针对mode = scroll有效)
 | yearEnd | Number | 1 | 加载当前年份后N年(仅针对mode = scroll有效)
 
 ### functions
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
+| show | Function | this.$refs.xxx.show() | 打开日历 |
+| hide | Function | this.$refs.xxx.hide() | 关闭日历 |
 | on-single-click | Function | val | 返回单选选中日期  |
 | on-multi-click | Function | startVal, endVal | 返回多选日期 |
 | on-warning | Function |  | 禁止选择当前日期时翻到首页 |

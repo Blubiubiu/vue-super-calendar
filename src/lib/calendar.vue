@@ -123,12 +123,12 @@ import Calendar from "./calendar.js";
  *
  * @param {string} [type] - single: 单选  multi: 多选
  * @param {string} [mode] - page: 翻页模式 scroll: 滑动模式
- * @param {string} [startDay] - 设置选定日期(仅针对single) e.g."2019-3-3"
+ * @param {string} [startDay] - 设置选定日期(仅针对single) e.g."2019/3/3"
  * @param {array} [multiTxt] - 多选文本(建议不超过两个字) default: ["入住", "离店"]
  * @param {boolean} [multiBefore] - 多选(是否允许选择当前日期之前的日期, 同时也会禁用往当前日期前翻页的功能) default: false
  * @param {boolean} [singleBefore] - 单选(是否允许选择当前日期之前的日期, 同时也会禁用往当前日期前翻页的功能) default: false
  * @param {boolean} [holiday] - 是否使用周六周日颜色区别 default: false
- * @param {array} [festival] - 特殊节日数组 default: [] e.g. "3-3"
+ * @param {array} [festival] - 特殊节日数组 default: [] e.g. "3/3"
  */
 
 export default {
@@ -185,13 +185,13 @@ export default {
       selectedDay:
         this.type !== "multi"
           ? new Date().getFullYear() +
-            "-" +
+            "/" +
             (new Date().getMonth() + 1) +
-            "-" +
+            "/" +
             new Date().getDate()
           : null,
       selectedLastDay: "",
-      currentDate: new Date().getFullYear() + "-" + (new Date().getMonth() + 1),
+      currentDate: new Date().getFullYear() + "/" + (new Date().getMonth() + 1),
       weekList: ["日", "一", "二", "三", "四", "五", "六"],
       dateList: [],
       dateListByYear: [],
@@ -279,7 +279,7 @@ export default {
       let _tmp = showDom.getAttribute("data-date").match(/\d+/gi);
       this.deltaY = e.touches[0].pageY - this.startY;
       this.translateDayY = this.deltaY + "px";
-      this.currentDate = `${+_tmp[0]}-${+_tmp[1]}`;
+      this.currentDate = `${+_tmp[0]}/${+_tmp[1]}`;
       this.translateYM();
     },
     touchEnd(e) {
@@ -306,9 +306,9 @@ export default {
     getToday() {
       this.today =
         new Date().getFullYear() +
-        "-" +
+        "/" +
         (new Date().getMonth() + 1) +
-        "-" +
+        "/" +
         new Date().getDate();
     },
     //年月份切换
@@ -342,12 +342,12 @@ export default {
           if (
             type === "getPrev" &&
             new Date(+tmp[0] + "/" + tmp[1]) <
-              new Date(this.today.replace(/\-/g, "/"))
+              new Date(this.today)
           ) {
             this.$emit("on-warning");
           } else {
             const newDate = this.calendar[type](+tmp[0], +tmp[1]);
-            this.currentDate = `${newDate.y}-${newDate.m}`;
+            this.currentDate = `${newDate.y}/${newDate.m}`;
             this.calendar.setDate(newDate.y, newDate.m, true);
             let list = this.calendar.getDayList(this.holiday, this.festival);
             this.dateList = JSON.parse(JSON.stringify(list));
@@ -364,17 +364,17 @@ export default {
                 item.multiTxt = this.multiTxt[1];
               }
               item.belong =
-                new Date(item.date.replace(/\-/g, "/")) <
-                new Date(this.today.replace(/\-/g, "/"))
+                new Date(item.date) <
+                new Date(this.today)
                   ? false
                   : true;
               if (
                 this.selectedLastDay &&
                 this.selectedDay &&
-                new Date(item.date.replace(/\-/g, "/")) <=
-                  new Date(this.selectedLastDay.replace(/\-/g, "/")) &&
-                new Date(item.date.replace(/\-/g, "/")) >=
-                  new Date(this.selectedDay.replace(/\-/g, "/"))
+                new Date(item.date) <=
+                  new Date(this.selectedLastDay) &&
+                new Date(item.date) >=
+                  new Date(this.selectedDay)
               ) {
                 item.multiSelected = true;
               } else {
@@ -385,7 +385,7 @@ export default {
         } else {
           //可选择所有日期
           const newDate = this.calendar[type](+tmp[0], +tmp[1]);
-          this.currentDate = `${newDate.y}-${newDate.m}`;
+          this.currentDate = `${newDate.y}/${newDate.m}`;
           this.calendar.setDate(newDate.y, newDate.m);
           let list = this.calendar.getDayList(this.holiday, this.festival);
           this.dateList = JSON.parse(JSON.stringify(list));
@@ -404,10 +404,10 @@ export default {
             if (
               this.selectedLastDay &&
               this.selectedDay &&
-              new Date(item.date.replace(/\-/g, "/")) <=
-                new Date(this.selectedLastDay.replace(/\-/g, "/")) &&
-              new Date(item.date.replace(/\-/g, "/")) >=
-                new Date(this.selectedDay.replace(/\-/g, "/"))
+              new Date(item.date) <=
+                new Date(this.selectedLastDay) &&
+              new Date(item.date) >=
+                new Date(this.selectedDay)
             ) {
               item.multiSelected = true;
             } else {
@@ -417,7 +417,7 @@ export default {
         }
       } else {
         const newDate = this.calendar[type](+tmp[0], +tmp[1]);
-        this.currentDate = `${newDate.y}-${newDate.m}`;
+        this.currentDate = `${newDate.y}/${newDate.m}`;
         this.calendar.setDate(newDate.y, newDate.m);
         let list = this.calendar.getDayList(this.holiday, this.festival);
         this.dateList = JSON.parse(JSON.stringify(list));
@@ -445,8 +445,8 @@ export default {
             });
             i.multiSelected = true;
           } else if (
-            new Date(i.date.replace(/\-/g, "/")) <
-            new Date(this.selectedDay.replace(/\-/g, "/"))
+            new Date(i.date) <
+            new Date(this.selectedDay)
           ) {
             //当选择的日期在之前
             this.selectedDay = i.date;
@@ -462,10 +462,10 @@ export default {
               if (
                 this.selectedLastDay &&
                 this.selectedDay &&
-                new Date(item.date.replace(/\-/g, "/")) <=
-                  new Date(this.selectedLastDay.replace(/\-/g, "/")) &&
-                new Date(item.date.replace(/\-/g, "/")) >=
-                  new Date(this.selectedDay.replace(/\-/g, "/"))
+                new Date(item.date) <=
+                  new Date(this.selectedLastDay) &&
+                new Date(item.date) >=
+                  new Date(this.selectedDay)
               ) {
                 item.multiSelected = true;
               } else {
@@ -516,8 +516,8 @@ export default {
             });
             i.multiSelected = true;
           } else if (
-            new Date(i.date.replace(/\-/g, "/")) <
-            new Date(this.selectedDay.replace(/\-/g, "/"))
+            new Date(i.date) <
+            new Date(this.selectedDay)
           ) {
             //当选择的日期在之前
             this.selectedDay = i.date;
@@ -536,10 +536,10 @@ export default {
                 if (
                   this.selectedLastDay &&
                   this.selectedDay &&
-                  new Date(item1.date.replace(/\-/g, "/")) <=
-                    new Date(this.selectedLastDay.replace(/\-/g, "/")) &&
-                  new Date(item1.date.replace(/\-/g, "/")) >=
-                    new Date(this.selectedDay.replace(/\-/g, "/"))
+                  new Date(item1.date) <=
+                    new Date(this.selectedLastDay) &&
+                  new Date(item1.date) >=
+                    new Date(this.selectedDay)
                 ) {
                   item1.multiSelected = true;
                 } else {
@@ -591,13 +591,13 @@ export default {
         //不允许选择当天之前日期并隐去非可选日期
         this.dateList.map(item => {
           item.multiBefore =
-            new Date(item.date.replace(/\-/g, "/")) <
-            new Date(this.today.replace(/\-/g, "/"))
+            new Date(item.date) <
+            new Date(this.today)
               ? false
               : true;
           item.belong =
-            new Date(item.date.replace(/\-/g, "/")) <
-            new Date(this.today.replace(/\-/g, "/"))
+            new Date(item.date) <
+            new Date(this.today)
               ? false
               : true;
         });
@@ -645,8 +645,8 @@ export default {
             this.deltaY = 0;
             this.dateListByYear[0].map(item => {
               item.belong =
-                new Date(item.date.replace(/\-/g, "/")) <
-                new Date(this.today.replace(/\-/g, "/"))
+                new Date(item.date) <
+                new Date(this.today)
                   ? false
                   : true;
             });
@@ -695,7 +695,7 @@ export default {
             //当输入的选定时间不符合规则时抛出异常
             throw new Error("请输入规定字符串---e.g. 2019/3/3");
           } else {
-            this.currentDate = `${tmp[0]}-${tmp[1]}`;
+            this.currentDate = `${tmp[0]}/${tmp[1]}`;
             this.changeSelectedDay(
               {
                 date: this.startDay,
@@ -713,8 +713,8 @@ export default {
                 this.deltaY = 0;
                 this.dateListByYear[0].map(item => {
                   item.belong =
-                    new Date(item.date.replace(/\-/g, "/")) <
-                    new Date(this.today.replace(/\-/g, "/"))
+                    new Date(item.date) <
+                    new Date(this.today)
                       ? false
                       : true;
                 });
@@ -739,8 +739,8 @@ export default {
               this.deltaY = 0;
               this.dateListByYear[0].map(item => {
                 item.belong =
-                  new Date(item.date.replace(/\-/g, "/")) <
-                  new Date(this.today.replace(/\-/g, "/"))
+                  new Date(item.date) <
+                  new Date(this.today)
                     ? false
                     : true;
               });
@@ -778,7 +778,7 @@ export default {
           } else {
             this.calendar.setDate(+tmp[0], +tmp[1], _status);
             this.getList();
-            this.currentDate = `${tmp[0]}-${tmp[1]}`;
+            this.currentDate = `${tmp[0]}/${tmp[1]}`;
             this.changeSelectedDay({
               date: this.startDay,
               belong: true

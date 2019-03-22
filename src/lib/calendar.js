@@ -15,10 +15,10 @@ class Calendar {
         return mday[m - 1];
     }
     getWeek(y, m, d) {
-        return parseInt(new Date(`${y}-${m}-${d}`).getDay())
+        return parseInt(new Date(`${y}/${m}/${d}`).getDay())
     }
     getName(y, m, d) {
-        return y + "-" + m + "-" + d;
+        return y + "/" + m + "/" + d;
     }
     /**
      * @desc 上一个月
@@ -67,24 +67,20 @@ class Calendar {
                 belong: !belong,
             })
         } else {
-            if (hide !== "hide") {
-                this.dayList.push({
-                    date: "",
-                    day: "",
-                    week: "",
-                    color: false,
-                    belong: false,
-                })
-            } else {
-                this.dayList.push({
-                    date: "",
-                    day: "",
-                    week: "",
-                    color: false,
-                    belong: false,
-                    hide: hide
-                })
-            }
+            hide !== "hide" ? this.dayList.push({
+                date: "",
+                day: "",
+                week: "",
+                color: false,
+                belong: false,
+            }) : this.dayList.push({
+                date: "",
+                day: "",
+                week: "",
+                color: false,
+                belong: false,
+                hide: hide
+            })
         }
     }
     clear() {
@@ -99,7 +95,7 @@ class Calendar {
     setDate(year, month, bool) {
         year = year || new Date().getFullYear();
         month = month || new Date().getMonth() + 1;
-        let cache_name = year + "-" + month;
+        let cache_name = year + "/" + month;
         if (this.cache[cache_name]) {
             this.dayList = this.cache[cache_name];
             return this;
@@ -214,7 +210,6 @@ class Calendar {
             list.map(item => {
                 if (item.week == 6 || item.week == 0) {
                     item.color = true;
-                    console.log(1, item)
                 }
             })
         }
@@ -223,7 +218,7 @@ class Calendar {
                 list.map(v => {
                     if (v.date) {
                         let _v = v.date.match(/\d+/gi);
-                        if (item == `${_v[1]}-${_v[2]}`) {
+                        if (item == `${_v[1]}/${_v[2]}`) {
                             v.color = true;
                         }
                     }
