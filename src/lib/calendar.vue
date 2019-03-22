@@ -812,7 +812,6 @@ div {
   right: 0;
   bottom: -430px;
   width: 100%;
-  max-width: 600px;
   height: 430px;
   z-index: 99;
   overflow: hidden;
