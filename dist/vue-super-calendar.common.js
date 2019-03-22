@@ -3261,7 +3261,7 @@ function () {
           date: date,
           day: day,
           week: this.getWeek(+tmp[0], +tmp[1], +tmp[2]),
-          color: "",
+          color: false,
           belong: !belong
         });
       } else {
@@ -3270,7 +3270,7 @@ function () {
             date: "",
             day: "",
             week: "",
-            color: "",
+            color: false,
             belong: false
           });
         } else {
@@ -3278,7 +3278,7 @@ function () {
             date: "",
             day: "",
             week: "",
-            color: "",
+            color: false,
             belong: false,
             hide: hide
           });
@@ -3438,6 +3438,7 @@ function () {
         list.map(function (item) {
           if (item.week == 6 || item.week == 0) {
             item.color = true;
+            console.log(1, item);
           }
         });
       }

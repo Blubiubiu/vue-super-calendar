@@ -63,7 +63,7 @@ class Calendar {
                 date: date,
                 day: day,
                 week: this.getWeek(+tmp[0], +tmp[1], +tmp[2]),
-                color: "",
+                color: false,
                 belong: !belong,
             })
         } else {
@@ -72,7 +72,7 @@ class Calendar {
                     date: "",
                     day: "",
                     week: "",
-                    color: "",
+                    color: false,
                     belong: false,
                 })
             } else {
@@ -80,7 +80,7 @@ class Calendar {
                     date: "",
                     day: "",
                     week: "",
-                    color: "",
+                    color: false,
                     belong: false,
                     hide: hide
                 })
@@ -214,6 +214,7 @@ class Calendar {
             list.map(item => {
                 if (item.week == 6 || item.week == 0) {
                     item.color = true;
+                    console.log(1, item)
                 }
             })
         }
