@@ -793,7 +793,7 @@ export default {
 }
 </style>
 
-<style scoped>
+<style>
 div {
   font-family: Arial, "Times New Roman", "Microsoft YaHei", SimHei;
 }
@@ -828,7 +828,7 @@ div {
 .calendar-title,
 .calendar-scroll-title {
   position: relative;
-  z-index: 9;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -884,7 +884,7 @@ div {
 .calendar-week,
 .calendar-scroll-week {
   position: relative;
-  z-index: 9;
+  z-index: 10;
   background: #fff;
 }
 .calendar-week > ul,

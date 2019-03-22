@@ -1,6 +1,6 @@
 {
   "name": "vue-super-calendar",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "private": false,
   "description": "vue-super-calendar",
   "main": "dist/vue-super-calendar.umd.min.js",
