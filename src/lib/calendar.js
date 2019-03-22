@@ -63,6 +63,7 @@ class Calendar {
                 date: date,
                 day: day,
                 week: this.getWeek(+tmp[0], +tmp[1], +tmp[2]),
+                color: "",
                 belong: !belong,
             })
         } else {
@@ -71,6 +72,7 @@ class Calendar {
                     date: "",
                     day: "",
                     week: "",
+                    color: "",
                     belong: false,
                 })
             } else {
@@ -78,6 +80,7 @@ class Calendar {
                     date: "",
                     day: "",
                     week: "",
+                    color: "",
                     belong: false,
                     hide: hide
                 })
