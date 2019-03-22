@@ -7,6 +7,13 @@
   <img src="https://img.shields.io/npm/dt/vue-super-calendar.svg">
 </a>
 
+[点击查看DEMO(建议使用开发者手机模式)](https://blubiubiu.github.io/vue-calendar/dist/index.html)
+
+或者扫描二维码
+
+![image](https://github.com/Blubiubiu/vue-super-calendar/blob/master/gif/demo.png)
+
+
 
 ## Install
 ```shell
