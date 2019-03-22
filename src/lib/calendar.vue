@@ -876,6 +876,7 @@ div {
   border-left: 2px solid #000;
   border-bottom: 2px solid #000;
   transform: rotate(45deg);
+  -webkit-tap-highlight-color: transparent;
 }
 .calendar-next {
   width: 10px;
@@ -883,6 +884,7 @@ div {
   border-top: 2px solid #000;
   border-right: 2px solid #000;
   transform: rotate(45deg);
+  -webkit-tap-highlight-color: transparent;
 }
 .calendar-day-wrapper,
 .calendar-scroll-day-wrapper {
@@ -916,6 +918,7 @@ div {
   align-items: center;
   height: 50px;
   list-style: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .calendar-week-holiday li:first-child,
 .calendar-week-holiday li:last-child {
