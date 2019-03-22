@@ -63,3 +63,14 @@ Vue.use(vueCalendar)
 | on-multi-click | Function | startVal, endVal | 返回多选日期 |
 | on-warning | Function |  | 禁止选择当前日期时翻到首页 |
 
+## babel problem
+
+``` shell
+npm install @babel/preset-env --save-dev
+
+presets: ['@babel/preset-env']
+```
+
+
+
+
