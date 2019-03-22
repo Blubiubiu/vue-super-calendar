@@ -209,7 +209,7 @@ class Calendar {
         //需要周末上色
         if (bool) {
             list.map(item => {
-                if (item.week === 6 || item.week === 0) {
+                if (item.week == 6 || item.week == 0) {
                     item.color = true;
                 }
             })

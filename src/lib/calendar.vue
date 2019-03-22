@@ -34,7 +34,8 @@
             </li>
           </ul>
         </div>
-        <div class="calendar-day-wrapper" v-if="mode === 'page'">
+        <div v-if="mode === 'page'">
+            <div class="calendar-day-wrapper">
           <ul>
             <li
               v-for="(item,index) in dateList"
@@ -48,32 +49,34 @@
             </li>
           </ul>
         </div>
-        <div
-          class="calendar-scroll-day-wrapper"
-          v-else
-          ref="calendarScroll"
-          @touchstart="touchStart"
-          @touchmove="touchMove"
-          @touchend="touchEnd"
-          :style="{transform: 'translate3d(0, ' + translateDayY + ', 0)', transitionDuration: translateDuration + 'ms'}"
-        >
-          <ul
-            v-for="(v, i) in dateListByYear"
-            :key="i"
-            :data-date="v[15].date"
-            class="calendar-day-ul"
+        </div>
+        <div v-else style="overflow: hidden;">
+          <div
+            class="calendar-scroll-day-wrapper"
+            ref="calendarScroll"
+            @touchstart="touchStart"
+            @touchmove="touchMove"
+            @touchend="touchEnd"
+            :style="{transform: 'translate3d(0, ' + translateDayY + ', 0)', transitionDuration: translateDuration + 'ms'}"
           >
-            <li
-              v-for="(item,index) in v"
-              :key="index"
-              :class="[item.checked? 'calendar-single-checked': 'calendar-single', item.belong?'calendar-day-enable': 'calendar-day-disabled', item.multiChecked? 'calendar-multi-checked': '', item.multiSelected? 'calendar-day-multiSelected': '', item.color? 'calendar-holiday': '', item.hide?'calendar-hide': '']"
+            <ul
+              v-for="(v, i) in dateListByYear"
+              :key="i"
+              :data-date="v[15].date"
+              class="calendar-day-ul"
             >
-              <div class="calendar-day" @click.stop="changeSelectedDay(item, i)">
-                {{item.day}}
-                <p v-if="type === 'multi' && item.multiChecked">{{item.multiTxt}}</p>
-              </div>
-            </li>
-          </ul>
+              <li
+                v-for="(item,index) in v"
+                :key="index"
+                :class="[item.checked? 'calendar-single-checked': 'calendar-single', item.belong?'calendar-day-enable': 'calendar-day-disabled', item.multiChecked? 'calendar-multi-checked': '', item.multiSelected? 'calendar-day-multiSelected': '', item.color? 'calendar-holiday': '', item.hide?'calendar-hide': '']"
+              >
+                <div class="calendar-day" @click.stop="changeSelectedDay(item, i)">
+                  {{item.day}}
+                  <p v-if="type === 'multi' && item.multiChecked">{{item.multiTxt}}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
