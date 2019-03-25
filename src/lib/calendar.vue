@@ -35,20 +35,20 @@
           </ul>
         </div>
         <div v-if="mode === 'page'">
-            <div class="calendar-day-wrapper">
-          <ul>
-            <li
-              v-for="(item,index) in dateList"
-              :key="index"
-              :class="[item.checked? 'calendar-single-checked': 'calendar-single', item.belong?'calendar-day-enable': 'calendar-day-disabled', item.multiChecked? 'calendar-multi-checked': '', item.multiSelected? 'calendar-day-multiSelected': '', item.color? 'calendar-holiday': '']"
-            >
-              <div class="calendar-day" @click="changeSelectedDay(item)">
-                {{item.day}}
-                <p v-if="type === 'multi' && item.multiChecked">{{item.multiTxt}}</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+          <div class="calendar-day-wrapper">
+            <ul>
+              <li
+                v-for="(item,index) in dateList"
+                :key="index"
+                :class="[item.checked? 'calendar-single-checked': 'calendar-single', item.belong?'calendar-day-enable': 'calendar-day-disabled', item.multiChecked? 'calendar-multi-checked': '', item.multiSelected? 'calendar-day-multiSelected': '', item.color? 'calendar-holiday': '']"
+              >
+                <div class="calendar-day" @click="changeSelectedDay(item)">
+                  {{item.day}}
+                  <p v-if="type === 'multi' && item.multiChecked">{{item.multiTxt}}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
         <div v-else style="overflow: hidden;">
           <div
@@ -212,7 +212,10 @@ export default {
       yearList: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
       liHeight: 25,
       //滑动
+      lastTime: 0,
       startY: 0,
+      startPageY: 0,
+      endPageY: 0,
       deltaY: 0,
       translateDayY: 0,
       translateMonthY: -new Date().getMonth() * 25 + "px",
@@ -254,12 +257,11 @@ export default {
     touchStart(e) {
       this.translateDuration = 0;
       this.startY = e.touches[0].pageY - this.deltaY;
-      let _hei = 0;
-      for (let i = 0; i < this.ulList.length; i++) {
-        _hei += this.ulList[i].clientHeight;
-      }
+      this.startPageY = e.touches[0].pageY;
+      this.lastTime = Date.now();
     },
     touchMove(e) {
+      this.endPageY = e.touches[0].pageY - this.startPageY;
       let showDom = null;
       for (let i = 0; i < this.ulList.length; i++) {
         if (
@@ -271,28 +273,42 @@ export default {
       }
       if (
         this.deltaY >= 100 ||
-        this.ulList[this.ulList.length - 1].getBoundingClientRect().top < 400
+        this.ulList[this.ulList.length - 1].getBoundingClientRect().top < 200
       ) {
-        this.translateDuration = 500;
         return false;
       }
       let _tmp = showDom.getAttribute("data-date").match(/\d+/gi);
       this.deltaY = e.touches[0].pageY - this.startY;
+      //阻力
+      if (this.deltaY > 0) {
+          this.deltaY *= 0.4
+      }
+      
       this.translateDayY = this.deltaY + "px";
       this.currentDate = `${+_tmp[0]}/${+_tmp[1]}`;
       this.translateYM();
     },
     touchEnd(e) {
+        let timeDis = Date.now() - this.lastTime;
+        let speed = (this.endPageY/ timeDis)*100;
+        this.translateDuration = 300;
+        this.translateDayY = parseInt(this.translateDayY) + speed + "px";
+        this.deltaY = parseInt(this.translateDayY);
+      //上顶
       if (this.deltaY >= 10) {
         this.deltaY = 0;
         this.translateDayY = 0;
-      }
-      if (
+      } else if (
+        //下底
         this.ulList[this.ulList.length - 1].getBoundingClientRect().top < 500
       ) {
+        let _hei = 0;
+        for (let i = 1; i < this.ulList.length; i++) {
+          _hei += this.ulList[i - 1].clientHeight;
+        }
         this.$nextTick(() => {
-          this.deltaY = -6390;
-          this.translateDayY = -6390 + "px";
+          this.deltaY = -_hei;
+          this.translateDayY = -_hei + "px";
         });
       }
     },
@@ -341,8 +357,7 @@ export default {
           //不可选择当前日期之前的日期
           if (
             type === "getPrev" &&
-            new Date(+tmp[0] + "/" + tmp[1]) <
-              new Date(this.today)
+            new Date(+tmp[0] + "/" + tmp[1]) < new Date(this.today)
           ) {
             this.$emit("on-warning");
           } else {
@@ -364,17 +379,12 @@ export default {
                 item.multiTxt = this.multiTxt[1];
               }
               item.belong =
-                new Date(item.date) <
-                new Date(this.today)
-                  ? false
-                  : true;
+                new Date(item.date) < new Date(this.today) ? false : true;
               if (
                 this.selectedLastDay &&
                 this.selectedDay &&
-                new Date(item.date) <=
-                  new Date(this.selectedLastDay) &&
-                new Date(item.date) >=
-                  new Date(this.selectedDay)
+                new Date(item.date) <= new Date(this.selectedLastDay) &&
+                new Date(item.date) >= new Date(this.selectedDay)
               ) {
                 item.multiSelected = true;
               } else {
@@ -404,10 +414,8 @@ export default {
             if (
               this.selectedLastDay &&
               this.selectedDay &&
-              new Date(item.date) <=
-                new Date(this.selectedLastDay) &&
-              new Date(item.date) >=
-                new Date(this.selectedDay)
+              new Date(item.date) <= new Date(this.selectedLastDay) &&
+              new Date(item.date) >= new Date(this.selectedDay)
             ) {
               item.multiSelected = true;
             } else {
@@ -444,10 +452,7 @@ export default {
               item.multiSelected = false;
             });
             i.multiSelected = true;
-          } else if (
-            new Date(i.date) <
-            new Date(this.selectedDay)
-          ) {
+          } else if (new Date(i.date) < new Date(this.selectedDay)) {
             //当选择的日期在之前
             this.selectedDay = i.date;
             i.multiTxt = this.multiTxt[0];
@@ -462,10 +467,8 @@ export default {
               if (
                 this.selectedLastDay &&
                 this.selectedDay &&
-                new Date(item.date) <=
-                  new Date(this.selectedLastDay) &&
-                new Date(item.date) >=
-                  new Date(this.selectedDay)
+                new Date(item.date) <= new Date(this.selectedLastDay) &&
+                new Date(item.date) >= new Date(this.selectedDay)
               ) {
                 item.multiSelected = true;
               } else {
@@ -515,10 +518,7 @@ export default {
               });
             });
             i.multiSelected = true;
-          } else if (
-            new Date(i.date) <
-            new Date(this.selectedDay)
-          ) {
+          } else if (new Date(i.date) < new Date(this.selectedDay)) {
             //当选择的日期在之前
             this.selectedDay = i.date;
             i.multiTxt = this.multiTxt[0];
@@ -536,10 +536,8 @@ export default {
                 if (
                   this.selectedLastDay &&
                   this.selectedDay &&
-                  new Date(item1.date) <=
-                    new Date(this.selectedLastDay) &&
-                  new Date(item1.date) >=
-                    new Date(this.selectedDay)
+                  new Date(item1.date) <= new Date(this.selectedLastDay) &&
+                  new Date(item1.date) >= new Date(this.selectedDay)
                 ) {
                   item1.multiSelected = true;
                 } else {
@@ -591,15 +589,9 @@ export default {
         //不允许选择当天之前日期并隐去非可选日期
         this.dateList.map(item => {
           item.multiBefore =
-            new Date(item.date) <
-            new Date(this.today)
-              ? false
-              : true;
+            new Date(item.date) < new Date(this.today) ? false : true;
           item.belong =
-            new Date(item.date) <
-            new Date(this.today)
-              ? false
-              : true;
+            new Date(item.date) < new Date(this.today) ? false : true;
         });
       }
     },
@@ -645,10 +637,7 @@ export default {
             this.deltaY = 0;
             this.dateListByYear[0].map(item => {
               item.belong =
-                new Date(item.date) <
-                new Date(this.today)
-                  ? false
-                  : true;
+                new Date(item.date) < new Date(this.today) ? false : true;
             });
           } else {
             this.translateDayY =
@@ -713,10 +702,7 @@ export default {
                 this.deltaY = 0;
                 this.dateListByYear[0].map(item => {
                   item.belong =
-                    new Date(item.date) <
-                    new Date(this.today)
-                      ? false
-                      : true;
+                    new Date(item.date) < new Date(this.today) ? false : true;
                 });
               } else {
                 this.translateDayY =
@@ -739,10 +725,7 @@ export default {
               this.deltaY = 0;
               this.dateListByYear[0].map(item => {
                 item.belong =
-                  new Date(item.date) <
-                  new Date(this.today)
-                    ? false
-                    : true;
+                  new Date(item.date) < new Date(this.today) ? false : true;
               });
               this.changeSelectedDay(
                 {

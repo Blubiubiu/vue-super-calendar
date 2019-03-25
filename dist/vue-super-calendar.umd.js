@@ -180,6 +180,21 @@ var update = add("0a92982c", content, true, {"sourceMap":false,"shadowMode":fals
 
 /***/ }),
 
+/***/ "0517":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("b251");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("85cb").default
+var update = add("13dfeb92", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "056e":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -233,6 +248,17 @@ module.exports = function (bitmap, value) {
     value: value
   };
 };
+
+
+/***/ }),
+
+/***/ "0782":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 20.3.3.1 / 15.9.4.4 Date.now()
+var $export = __webpack_require__("471d");
+
+$export($export.S, 'Date', { now: function () { return new Date().getTime(); } });
 
 
 /***/ }),
@@ -1206,21 +1232,6 @@ module.exports = function (it) {
 
 /***/ }),
 
-/***/ "42aa":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("690e")(false);
-// imports
-
-
-// module
-exports.push([module.i, "div[data-v-9c5469c4]{font-family:Arial,Times New Roman,Microsoft YaHei,SimHei}.gray-wrapper[data-v-9c5469c4]{position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.5);z-index:9}.calendar-wrapper[data-v-9c5469c4]{position:fixed;left:0;right:0;bottom:-430px;width:100%;height:430px;z-index:99;overflow:hidden;background:#fff;-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;-webkit-transform:translateY(0);transform:translateY(0)}.calendar-wrapper-active[data-v-9c5469c4]{-webkit-transform:translateY(-430px);transform:translateY(-430px)}#calendar-content[data-v-9c5469c4]{background:#fff}.calendar-scroll-title[data-v-9c5469c4],.calendar-title[data-v-9c5469c4]{position:relative;z-index:10;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 20px;font-size:22px;font-weight:500;height:50px;color:#000;background:#fff;-webkit-box-shadow:0 2px 6px 0 #dde4eb;box-shadow:0 2px 6px 0 #dde4eb}.calendar-scroll-title[data-v-9c5469c4]{-webkit-box-shadow:none;box-shadow:none}.calendar-title-date[data-v-9c5469c4]{display:-webkit-box;display:-ms-flexbox;display:flex}.calendar-title-date-month[data-v-9c5469c4],.calendar-title-date-year[data-v-9c5469c4]{height:25px;line-height:25px;overflow:hidden}.calendar-title-date-year[data-v-9c5469c4]{display:-webkit-box;display:-ms-flexbox;display:flex}.calendar-title-date ul[data-v-9c5469c4]{height:25px;-webkit-transition:all .5s;transition:all .5s}.calendar-title-date ul>li[data-v-9c5469c4]{list-style:none}.calendar-prev[data-v-9c5469c4]{border-left:2px solid #000;border-bottom:2px solid #000}.calendar-next[data-v-9c5469c4],.calendar-prev[data-v-9c5469c4]{width:10px;height:10px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-tap-highlight-color:transparent}.calendar-next[data-v-9c5469c4]{border-top:2px solid #000;border-right:2px solid #000}.calendar-day-wrapper[data-v-9c5469c4],.calendar-scroll-day-wrapper[data-v-9c5469c4]{height:330px}.calendar-scroll-week[data-v-9c5469c4],.calendar-week[data-v-9c5469c4]{position:relative;z-index:10;background:#fff}.calendar-day-wrapper>ul[data-v-9c5469c4],.calendar-scroll-day-wrapper>ul[data-v-9c5469c4],.calendar-scroll-week>ul[data-v-9c5469c4],.calendar-week>ul[data-v-9c5469c4]{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.calendar-scroll-week>ul>li[data-v-9c5469c4],.calendar-week>ul>li[data-v-9c5469c4]{color:#999}.calendar-day-wrapper>ul>li[data-v-9c5469c4],.calendar-scroll-day-wrapper>ul>li[data-v-9c5469c4],.calendar-scroll-week>ul>li[data-v-9c5469c4],.calendar-week>ul>li[data-v-9c5469c4]{-webkit-box-flex:0;-ms-flex:0 0 14.2857%;flex:0 0 14.2857%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:50px;list-style:none;-webkit-tap-highlight-color:transparent}.calendar-week-holiday li[data-v-9c5469c4]:first-child,.calendar-week-holiday li[data-v-9c5469c4]:last-child{color:#ff9600}.calendar-scroll-week[data-v-9c5469c4]{position:relative;z-index:9}.calendar-scroll-week>ul[data-v-9c5469c4]{border-top:1px solid #dde4ed;-webkit-box-shadow:0 2px 6px 0 #dde4eb;box-shadow:0 2px 6px 0 #dde4eb}.calendar-day-wrapper>ul[data-v-9c5469c4]{height:330px}.calendar-scroll-day-wrapper>ul[data-v-9c5469c4]{border-bottom:1px solid #dde4ed}.calendar-day-wrapper>ul>li[data-v-9c5469c4],.calendar-scroll-day-wrapper>ul>li[data-v-9c5469c4]{margin-top:4px}.calendar-single-checked[data-v-9c5469c4]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.calendar-multi-checked .calendar-day[data-v-9c5469c4],.calendar-single-checked .calendar-day[data-v-9c5469c4]{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;color:#fff;background:#00c293;-webkit-box-shadow:0 2px 6px 0 #31dbb2;box-shadow:0 2px 6px 0 #31dbb2;border-radius:4px}.calendar-day-disabled .calendar-day[data-v-9c5469c4]{color:#e3e3e3;background:#fff;-webkit-box-shadow:none;box-shadow:none;border-radius:none}.calendar-day-disabled .calendar-day p[data-v-9c5469c4]{display:none}.calendar-day[data-v-9c5469c4]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;height:100%}.calendar-day>p[data-v-9c5469c4]{text-align:center;font-size:12px}.calendar-day-enable[data-v-9c5469c4]{color:#000}.calendar-day-disabled[data-v-9c5469c4]{color:#e3e3e3!important;background:#fff!important}.calendar-day-multiSelected[data-v-9c5469c4]{color:#000;background:#b9fff5}.calendar-holiday[data-v-9c5469c4]{color:#ff9600}.calendar-hide[data-v-9c5469c4]{display:none!important}", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "44a7":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1549,6 +1560,13 @@ module.exports = function (it) {
 
 /***/ }),
 
+/***/ "5a48":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("9f30");
+
+/***/ }),
+
 /***/ "5ab7":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1620,6 +1638,17 @@ module.exports = function (Constructor, NAME, next) {
   setToStringTag(Constructor, NAME + ' Iterator');
 };
 
+
+/***/ }),
+
+/***/ "611e":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_1_id_3ccb133c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("0517");
+/* harmony import */ var _node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_1_id_3ccb133c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_1_id_3ccb133c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_1_id_3ccb133c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -2282,17 +2311,6 @@ module.exports = __webpack_require__("ed3f");
 
 /***/ }),
 
-/***/ "853e":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_1_id_9c5469c4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("8805");
-/* harmony import */ var _node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_1_id_9c5469c4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_1_id_9c5469c4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_4_1_2_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_15_7_0_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_2_0_1_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_7_0_vue_loader_lib_index_js_vue_loader_options_calendar_vue_vue_type_style_index_1_id_9c5469c4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "85cb":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2556,21 +2574,6 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ "8805":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("42aa");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("85cb").default
-var update = add("4acd4f8a", content, true, {"sourceMap":false,"shadowMode":false});
-
-/***/ }),
-
 /***/ "8af1":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2785,6 +2788,15 @@ __webpack_require__("dfd0")('keys', function () {
 
 /***/ }),
 
+/***/ "9f30":
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__("0782");
+module.exports = __webpack_require__("836e").Date.now;
+
+
+/***/ }),
+
 /***/ "a051":
 /***/ (function(module, exports) {
 
@@ -2989,6 +3001,21 @@ module.exports = __webpack_require__("92dd");
 
 /***/ }),
 
+/***/ "b251":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("690e")(false);
+// imports
+
+
+// module
+exports.push([module.i, "div[data-v-3ccb133c]{font-family:Arial,Times New Roman,Microsoft YaHei,SimHei}.gray-wrapper[data-v-3ccb133c]{position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.5);z-index:9}.calendar-wrapper[data-v-3ccb133c]{position:fixed;left:0;right:0;bottom:-430px;width:100%;height:430px;z-index:99;overflow:hidden;background:#fff;-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;-webkit-transform:translateY(0);transform:translateY(0)}.calendar-wrapper-active[data-v-3ccb133c]{-webkit-transform:translateY(-430px);transform:translateY(-430px)}#calendar-content[data-v-3ccb133c]{background:#fff}.calendar-scroll-title[data-v-3ccb133c],.calendar-title[data-v-3ccb133c]{position:relative;z-index:10;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 20px;font-size:22px;font-weight:500;height:50px;color:#000;background:#fff;-webkit-box-shadow:0 2px 6px 0 #dde4eb;box-shadow:0 2px 6px 0 #dde4eb}.calendar-scroll-title[data-v-3ccb133c]{-webkit-box-shadow:none;box-shadow:none}.calendar-title-date[data-v-3ccb133c]{display:-webkit-box;display:-ms-flexbox;display:flex}.calendar-title-date-month[data-v-3ccb133c],.calendar-title-date-year[data-v-3ccb133c]{height:25px;line-height:25px;overflow:hidden}.calendar-title-date-year[data-v-3ccb133c]{display:-webkit-box;display:-ms-flexbox;display:flex}.calendar-title-date ul[data-v-3ccb133c]{height:25px;-webkit-transition:all .5s;transition:all .5s}.calendar-title-date ul>li[data-v-3ccb133c]{list-style:none}.calendar-prev[data-v-3ccb133c]{border-left:2px solid #000;border-bottom:2px solid #000}.calendar-next[data-v-3ccb133c],.calendar-prev[data-v-3ccb133c]{width:10px;height:10px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-tap-highlight-color:transparent}.calendar-next[data-v-3ccb133c]{border-top:2px solid #000;border-right:2px solid #000}.calendar-day-wrapper[data-v-3ccb133c],.calendar-scroll-day-wrapper[data-v-3ccb133c]{height:330px}.calendar-scroll-week[data-v-3ccb133c],.calendar-week[data-v-3ccb133c]{position:relative;z-index:10;background:#fff}.calendar-day-wrapper>ul[data-v-3ccb133c],.calendar-scroll-day-wrapper>ul[data-v-3ccb133c],.calendar-scroll-week>ul[data-v-3ccb133c],.calendar-week>ul[data-v-3ccb133c]{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.calendar-scroll-week>ul>li[data-v-3ccb133c],.calendar-week>ul>li[data-v-3ccb133c]{color:#999}.calendar-day-wrapper>ul>li[data-v-3ccb133c],.calendar-scroll-day-wrapper>ul>li[data-v-3ccb133c],.calendar-scroll-week>ul>li[data-v-3ccb133c],.calendar-week>ul>li[data-v-3ccb133c]{-webkit-box-flex:0;-ms-flex:0 0 14.2857%;flex:0 0 14.2857%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:50px;list-style:none;-webkit-tap-highlight-color:transparent}.calendar-week-holiday li[data-v-3ccb133c]:first-child,.calendar-week-holiday li[data-v-3ccb133c]:last-child{color:#ff9600}.calendar-scroll-week[data-v-3ccb133c]{position:relative;z-index:9}.calendar-scroll-week>ul[data-v-3ccb133c]{border-top:1px solid #dde4ed;-webkit-box-shadow:0 2px 6px 0 #dde4eb;box-shadow:0 2px 6px 0 #dde4eb}.calendar-day-wrapper>ul[data-v-3ccb133c]{height:330px}.calendar-scroll-day-wrapper>ul[data-v-3ccb133c]{border-bottom:1px solid #dde4ed}.calendar-day-wrapper>ul>li[data-v-3ccb133c],.calendar-scroll-day-wrapper>ul>li[data-v-3ccb133c]{margin-top:4px}.calendar-single-checked[data-v-3ccb133c]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.calendar-multi-checked .calendar-day[data-v-3ccb133c],.calendar-single-checked .calendar-day[data-v-3ccb133c]{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;color:#fff;background:#00c293;-webkit-box-shadow:0 2px 6px 0 #31dbb2;box-shadow:0 2px 6px 0 #31dbb2;border-radius:4px}.calendar-day-disabled .calendar-day[data-v-3ccb133c]{color:#e3e3e3;background:#fff;-webkit-box-shadow:none;box-shadow:none;border-radius:none}.calendar-day-disabled .calendar-day p[data-v-3ccb133c]{display:none}.calendar-day[data-v-3ccb133c]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;height:100%}.calendar-day>p[data-v-3ccb133c]{text-align:center;font-size:12px}.calendar-day-enable[data-v-3ccb133c]{color:#000}.calendar-day-disabled[data-v-3ccb133c]{color:#e3e3e3!important;background:#fff!important}.calendar-day-multiSelected[data-v-3ccb133c]{color:#000;background:#b9fff5}.calendar-holiday[data-v-3ccb133c]{color:#ff9600}.calendar-hide[data-v-3ccb133c]{display:none!important}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "b429":
 /***/ (function(module, exports) {
 
@@ -3088,12 +3115,12 @@ function _objectSpread(target) {
 
   return target;
 }
-// CONCATENATED MODULE: ./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3bc25e80-vue-loader-template"}!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js??ref--0-0!./node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./src/lib/calendar.vue?vue&type=template&id=9c5469c4&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"position":"relative","z-index":"9"}},[_c('div',{class:_vm.status? 'calendar-wrapper calendar-wrapper-active' : 'calendar-wrapper'},[_c('div',{attrs:{"id":"calendar-content"},on:{"touchmove":function($event){$event.preventDefault();}}},[_c('div',{class:this.mode === 'page'? 'calendar-title': 'calendar-scroll-title'},[(this.mode === 'page')?_c('div',{staticClass:"calendar-prev",on:{"click":_vm.prev}}):_vm._e(),_c('div',{staticClass:"calendar-title-date"},[_c('div',{staticClass:"calendar-title-date-year"},_vm._l((_vm.translateYearY),function(item,index){return _c('ul',{key:index,style:({'transform': 'translateY(' + _vm.translateYearY[index] + ')'})},_vm._l((_vm.yearList),function(v,i){return _c('li',{key:i},[_c('span',[_vm._v(_vm._s(v))])])}),0)}),0),_c('div',[_vm._v(" - ")]),_c('div',{staticClass:"calendar-title-date-month"},[_c('ul',{style:({'transform': 'translate3d(0, ' + _vm.translateMonthY + ', 0)'})},_vm._l((_vm.monthList),function(item,index){return _c('li',{key:index},[_c('span',[_vm._v(_vm._s(item))])])}),0)])]),(this.mode === 'page')?_c('div',{staticClass:"calendar-next",on:{"click":_vm.next}}):_vm._e()]),_c('div',{class:this.mode === 'page'? 'calendar-week': 'calendar-scroll-week'},[_c('ul',{class:this.holiday? 'calendar-week-holiday': ''},_vm._l((_vm.weekList),function(item,index){return _c('li',{key:index},[_c('span',[_vm._v(_vm._s(item))])])}),0)]),(_vm.mode === 'page')?_c('div',[_c('div',{staticClass:"calendar-day-wrapper"},[_c('ul',_vm._l((_vm.dateList),function(item,index){return _c('li',{key:index,class:[item.checked? 'calendar-single-checked': 'calendar-single', item.belong?'calendar-day-enable': 'calendar-day-disabled', item.multiChecked? 'calendar-multi-checked': '', item.multiSelected? 'calendar-day-multiSelected': '', item.color? 'calendar-holiday': '']},[_c('div',{staticClass:"calendar-day",on:{"click":function($event){return _vm.changeSelectedDay(item)}}},[_vm._v("\n              "+_vm._s(item.day)+"\n              "),(_vm.type === 'multi' && item.multiChecked)?_c('p',[_vm._v(_vm._s(item.multiTxt))]):_vm._e()])])}),0)])]):_c('div',{staticStyle:{"overflow":"hidden"}},[_c('div',{ref:"calendarScroll",staticClass:"calendar-scroll-day-wrapper",style:({transform: 'translate3d(0, ' + _vm.translateDayY + ', 0)', transitionDuration: _vm.translateDuration + 'ms'}),on:{"touchstart":_vm.touchStart,"touchmove":_vm.touchMove,"touchend":_vm.touchEnd}},_vm._l((_vm.dateListByYear),function(v,i){return _c('ul',{key:i,staticClass:"calendar-day-ul",attrs:{"data-date":v[15].date}},_vm._l((v),function(item,index){return _c('li',{key:index,class:[item.checked? 'calendar-single-checked': 'calendar-single', item.belong?'calendar-day-enable': 'calendar-day-disabled', item.multiChecked? 'calendar-multi-checked': '', item.multiSelected? 'calendar-day-multiSelected': '', item.color? 'calendar-holiday': '', item.hide?'calendar-hide': '']},[_c('div',{staticClass:"calendar-day",on:{"click":function($event){$event.stopPropagation();return _vm.changeSelectedDay(item, i)}}},[_vm._v("\n                "+_vm._s(item.day)+"\n                "),(_vm.type === 'multi' && item.multiChecked)?_c('p',[_vm._v(_vm._s(item.multiTxt))]):_vm._e()])])}),0)}),0)])])]),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.status),expression:"status"}],staticClass:"gray-wrapper",on:{"click":function($event){_vm.status=false},"touchmove":function($event){$event.preventDefault();}}})])}
+// CONCATENATED MODULE: ./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3bc25e80-vue-loader-template"}!./node_modules/_vue-loader@15.7.0@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js??ref--0-0!./node_modules/_vue-loader@15.7.0@vue-loader/lib??vue-loader-options!./src/lib/calendar.vue?vue&type=template&id=3ccb133c&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"position":"relative","z-index":"9"}},[_c('div',{class:_vm.status? 'calendar-wrapper calendar-wrapper-active' : 'calendar-wrapper'},[_c('div',{attrs:{"id":"calendar-content"},on:{"touchmove":function($event){$event.preventDefault();}}},[_c('div',{class:this.mode === 'page'? 'calendar-title': 'calendar-scroll-title'},[(this.mode === 'page')?_c('div',{staticClass:"calendar-prev",on:{"click":_vm.prev}}):_vm._e(),_c('div',{staticClass:"calendar-title-date"},[_c('div',{staticClass:"calendar-title-date-year"},_vm._l((_vm.translateYearY),function(item,index){return _c('ul',{key:index,style:({'transform': 'translateY(' + _vm.translateYearY[index] + ')'})},_vm._l((_vm.yearList),function(v,i){return _c('li',{key:i},[_c('span',[_vm._v(_vm._s(v))])])}),0)}),0),_c('div',[_vm._v(" - ")]),_c('div',{staticClass:"calendar-title-date-month"},[_c('ul',{style:({'transform': 'translate3d(0, ' + _vm.translateMonthY + ', 0)'})},_vm._l((_vm.monthList),function(item,index){return _c('li',{key:index},[_c('span',[_vm._v(_vm._s(item))])])}),0)])]),(this.mode === 'page')?_c('div',{staticClass:"calendar-next",on:{"click":_vm.next}}):_vm._e()]),_c('div',{class:this.mode === 'page'? 'calendar-week': 'calendar-scroll-week'},[_c('ul',{class:this.holiday? 'calendar-week-holiday': ''},_vm._l((_vm.weekList),function(item,index){return _c('li',{key:index},[_c('span',[_vm._v(_vm._s(item))])])}),0)]),(_vm.mode === 'page')?_c('div',[_c('div',{staticClass:"calendar-day-wrapper"},[_c('ul',_vm._l((_vm.dateList),function(item,index){return _c('li',{key:index,class:[item.checked? 'calendar-single-checked': 'calendar-single', item.belong?'calendar-day-enable': 'calendar-day-disabled', item.multiChecked? 'calendar-multi-checked': '', item.multiSelected? 'calendar-day-multiSelected': '', item.color? 'calendar-holiday': '']},[_c('div',{staticClass:"calendar-day",on:{"click":function($event){return _vm.changeSelectedDay(item)}}},[_vm._v("\n                "+_vm._s(item.day)+"\n                "),(_vm.type === 'multi' && item.multiChecked)?_c('p',[_vm._v(_vm._s(item.multiTxt))]):_vm._e()])])}),0)])]):_c('div',{staticStyle:{"overflow":"hidden"}},[_c('div',{ref:"calendarScroll",staticClass:"calendar-scroll-day-wrapper",style:({transform: 'translate3d(0, ' + _vm.translateDayY + ', 0)', transitionDuration: _vm.translateDuration + 'ms'}),on:{"touchstart":_vm.touchStart,"touchmove":_vm.touchMove,"touchend":_vm.touchEnd}},_vm._l((_vm.dateListByYear),function(v,i){return _c('ul',{key:i,staticClass:"calendar-day-ul",attrs:{"data-date":v[15].date}},_vm._l((v),function(item,index){return _c('li',{key:index,class:[item.checked? 'calendar-single-checked': 'calendar-single', item.belong?'calendar-day-enable': 'calendar-day-disabled', item.multiChecked? 'calendar-multi-checked': '', item.multiSelected? 'calendar-day-multiSelected': '', item.color? 'calendar-holiday': '', item.hide?'calendar-hide': '']},[_c('div',{staticClass:"calendar-day",on:{"click":function($event){$event.stopPropagation();return _vm.changeSelectedDay(item, i)}}},[_vm._v("\n                "+_vm._s(item.day)+"\n                "),(_vm.type === 'multi' && item.multiChecked)?_c('p',[_vm._v(_vm._s(item.multiTxt))]):_vm._e()])])}),0)}),0)])])]),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.status),expression:"status"}],staticClass:"gray-wrapper",on:{"click":function($event){_vm.status=false},"touchmove":function($event){$event.preventDefault();}}})])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/lib/calendar.vue?vue&type=template&id=9c5469c4&scoped=true&
+// CONCATENATED MODULE: ./src/lib/calendar.vue?vue&type=template&id=3ccb133c&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/_core-js@2.6.5@core-js/modules/es6.regexp.match.js
 var es6_regexp_match = __webpack_require__("f10e");
@@ -3117,6 +3144,10 @@ var stringify_default = /*#__PURE__*/__webpack_require__.n(stringify);
 // EXTERNAL MODULE: ./node_modules/_@babel_runtime-corejs2@7.4.2@@babel/runtime-corejs2/core-js/parse-int.js
 var parse_int = __webpack_require__("056e");
 var parse_int_default = /*#__PURE__*/__webpack_require__.n(parse_int);
+
+// EXTERNAL MODULE: ./node_modules/_@babel_runtime-corejs2@7.4.2@@babel/runtime-corejs2/core-js/date/now.js
+var now = __webpack_require__("5a48");
+var now_default = /*#__PURE__*/__webpack_require__.n(now);
 
 // EXTERNAL MODULE: ./node_modules/_@babel_runtime-corejs2@7.4.2@@babel/runtime-corejs2/core-js/array/is-array.js
 var is_array = __webpack_require__("f109");
@@ -3487,6 +3518,7 @@ function () {
 
 
 
+
  //
 //
 //
@@ -3680,7 +3712,10 @@ function () {
       yearList: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
       liHeight: 25,
       //滑动
+      lastTime: 0,
       startY: 0,
+      startPageY: 0,
+      endPageY: 0,
       deltaY: 0,
       translateDayY: 0,
       translateMonthY: -new Date().getMonth() * 25 + "px",
@@ -3697,13 +3732,11 @@ function () {
     touchStart: function touchStart(e) {
       this.translateDuration = 0;
       this.startY = e.touches[0].pageY - this.deltaY;
-      var _hei = 0;
-
-      for (var i = 0; i < this.ulList.length; i++) {
-        _hei += this.ulList[i].clientHeight;
-      }
+      this.startPageY = e.touches[0].pageY;
+      this.lastTime = now_default()();
     },
     touchMove: function touchMove(e) {
+      this.endPageY = e.touches[0].pageY - this.startPageY;
       var showDom = null;
 
       for (var i = 0; i < this.ulList.length; i++) {
@@ -3712,14 +3745,18 @@ function () {
         }
       }
 
-      if (this.deltaY >= 100 || this.ulList[this.ulList.length - 1].getBoundingClientRect().top < 400) {
-        this.translateDuration = 500;
+      if (this.deltaY >= 100 || this.ulList[this.ulList.length - 1].getBoundingClientRect().top < 200) {
         return false;
       }
 
       var _tmp = showDom.getAttribute("data-date").match(/\d+/gi);
 
-      this.deltaY = e.touches[0].pageY - this.startY;
+      this.deltaY = e.touches[0].pageY - this.startY; //阻力
+
+      if (this.deltaY > 0) {
+        this.deltaY *= 0.4;
+      }
+
       this.translateDayY = this.deltaY + "px";
       this.currentDate = "".concat(+_tmp[0], "/").concat(+_tmp[1]);
       this.translateYM();
@@ -3727,15 +3764,26 @@ function () {
     touchEnd: function touchEnd(e) {
       var _this = this;
 
+      var timeDis = now_default()() - this.lastTime;
+      var speed = this.endPageY / timeDis * 100;
+      this.translateDuration = 300;
+      this.translateDayY = parse_int_default()(this.translateDayY) + speed + "px";
+      this.deltaY = parse_int_default()(this.translateDayY); //上顶
+
       if (this.deltaY >= 10) {
         this.deltaY = 0;
         this.translateDayY = 0;
-      }
+      } else if ( //下底
+      this.ulList[this.ulList.length - 1].getBoundingClientRect().top < 500) {
+        var _hei = 0;
 
-      if (this.ulList[this.ulList.length - 1].getBoundingClientRect().top < 500) {
+        for (var i = 1; i < this.ulList.length; i++) {
+          _hei += this.ulList[i - 1].clientHeight;
+        }
+
         this.$nextTick(function () {
-          _this.deltaY = -6390;
-          _this.translateDayY = -6390 + "px";
+          _this.deltaY = -_hei;
+          _this.translateDayY = -_hei + "px";
         });
       }
     },
@@ -4135,8 +4183,8 @@ function () {
 // EXTERNAL MODULE: ./src/lib/calendar.vue?vue&type=style&index=0&lang=css&
 var calendarvue_type_style_index_0_lang_css_ = __webpack_require__("a35c");
 
-// EXTERNAL MODULE: ./src/lib/calendar.vue?vue&type=style&index=1&id=9c5469c4&scoped=true&lang=css&
-var calendarvue_type_style_index_1_id_9c5469c4_scoped_true_lang_css_ = __webpack_require__("853e");
+// EXTERNAL MODULE: ./src/lib/calendar.vue?vue&type=style&index=1&id=3ccb133c&scoped=true&lang=css&
+var calendarvue_type_style_index_1_id_3ccb133c_scoped_true_lang_css_ = __webpack_require__("611e");
 
 // CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.0@vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -4249,7 +4297,7 @@ var component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "9c5469c4",
+  "3ccb133c",
   null
   
 )
